@@ -1,0 +1,10 @@
+C:\Users\sandra\Documents\Visual Studio 2010\Projects\ManagementTool\ManagementTool\bin\Debug\ManagementTool.exe
+C:\Users\sandra\Documents\Visual Studio 2010\Projects\ManagementTool\ManagementTool\bin\Debug\ManagementTool.pdb
+C:\Users\sandra\Documents\Visual Studio 2010\Projects\ManagementTool\ManagementTool\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\sandra\Documents\Visual Studio 2010\Projects\ManagementTool\ManagementTool\obj\x86\Debug\ManagementTool.MainUI.resources
+C:\Users\sandra\Documents\Visual Studio 2010\Projects\ManagementTool\ManagementTool\obj\x86\Debug\ManagementTool.Properties.Resources.resources
+C:\Users\sandra\Documents\Visual Studio 2010\Projects\ManagementTool\ManagementTool\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\sandra\Documents\Visual Studio 2010\Projects\ManagementTool\ManagementTool\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\sandra\Documents\Visual Studio 2010\Projects\ManagementTool\ManagementTool\obj\x86\Debug\ManagementTool.exe
+C:\Users\sandra\Documents\Visual Studio 2010\Projects\ManagementTool\ManagementTool\obj\x86\Debug\ManagementTool.pdb
+C:\Users\sandra\Documents\Visual Studio 2010\Projects\ManagementTool\ManagementTool\obj\x86\Debug\ManagementTool.Lager.resources
