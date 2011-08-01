@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace ManagementTool
 {
-    public partial class SupplierAdd : Form
+    public partial class Roles : Form
     {
-        public SupplierAdd()
+        public Roles()
         {
             InitializeComponent();
         }

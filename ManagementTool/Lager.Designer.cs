@@ -54,6 +54,21 @@
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPageLieferantEdit = new System.Windows.Forms.TabPage();
+            this.checkBoxSupplierEditDelete = new System.Windows.Forms.CheckBox();
+            this.textBoxSupplierEditNotes = new System.Windows.Forms.TextBox();
+            this.textBoxSupplierEditWWW = new System.Windows.Forms.TextBox();
+            this.textBoxSupplierEditEmail = new System.Windows.Forms.TextBox();
+            this.textBoxSupplierEditHandy = new System.Windows.Forms.TextBox();
+            this.textBoxSupplierEditAreaCodeHandy = new System.Windows.Forms.TextBox();
+            this.textBoxSupplierEditFax = new System.Windows.Forms.TextBox();
+            this.textBoxSupplierEditAreaCodeFax = new System.Windows.Forms.TextBox();
+            this.textBoxSupplierEditPhone = new System.Windows.Forms.TextBox();
+            this.textBoxSupplierEditAreaCodePhone = new System.Windows.Forms.TextBox();
+            this.textBoxSupplierEditCity = new System.Windows.Forms.TextBox();
+            this.textBoxSupplierEditZip = new System.Windows.Forms.TextBox();
+            this.textBoxSupplierEditHno = new System.Windows.Forms.TextBox();
+            this.textBoxSupplierEditStreet = new System.Windows.Forms.TextBox();
+            this.textBoxSupplierEditName = new System.Windows.Forms.TextBox();
             this.labelSupplierEditNotes = new System.Windows.Forms.Label();
             this.labelSupplierEditWWW = new System.Windows.Forms.Label();
             this.labelSupplierEditEmail = new System.Windows.Forms.Label();
@@ -107,21 +122,6 @@
             this.buttonLagerPositionEditSave = new System.Windows.Forms.Button();
             this.tabPageLagerPositionAdd = new System.Windows.Forms.TabPage();
             this.buttonLagerPositionAddSave = new System.Windows.Forms.Button();
-            this.textBoxSupplierEditName = new System.Windows.Forms.TextBox();
-            this.textBoxSupplierEditStreet = new System.Windows.Forms.TextBox();
-            this.textBoxSupplierEditHno = new System.Windows.Forms.TextBox();
-            this.textBoxSupplierEditZip = new System.Windows.Forms.TextBox();
-            this.textBoxSupplierEditCity = new System.Windows.Forms.TextBox();
-            this.textBoxSupplierEditAreaCodePhone = new System.Windows.Forms.TextBox();
-            this.textBoxSupplierEditPhone = new System.Windows.Forms.TextBox();
-            this.textBoxSupplierEditAreaCodeFax = new System.Windows.Forms.TextBox();
-            this.textBoxSupplierEditFax = new System.Windows.Forms.TextBox();
-            this.textBoxSupplierEditAreaCodeHandy = new System.Windows.Forms.TextBox();
-            this.textBoxSupplierEditHandy = new System.Windows.Forms.TextBox();
-            this.textBoxSupplierEditEmail = new System.Windows.Forms.TextBox();
-            this.textBoxSupplierEditWWW = new System.Windows.Forms.TextBox();
-            this.textBoxSupplierEditNotes = new System.Windows.Forms.TextBox();
-            this.checkBoxSupplierEditDelete = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tabPageLieferantEdit.SuspendLayout();
@@ -136,6 +136,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dateiToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -251,6 +252,114 @@
             this.tabPageLieferantEdit.Size = new System.Drawing.Size(913, 464);
             this.tabPageLieferantEdit.TabIndex = 0;
             this.tabPageLieferantEdit.Text = "Lieferant Editieren";
+            // 
+            // checkBoxSupplierEditDelete
+            // 
+            this.checkBoxSupplierEditDelete.AutoSize = true;
+            this.checkBoxSupplierEditDelete.Location = new System.Drawing.Point(702, 230);
+            this.checkBoxSupplierEditDelete.Name = "checkBoxSupplierEditDelete";
+            this.checkBoxSupplierEditDelete.Size = new System.Drawing.Size(111, 17);
+            this.checkBoxSupplierEditDelete.TabIndex = 27;
+            this.checkBoxSupplierEditDelete.Text = "Lieferant Löschen";
+            this.checkBoxSupplierEditDelete.UseVisualStyleBackColor = true;
+            // 
+            // textBoxSupplierEditNotes
+            // 
+            this.textBoxSupplierEditNotes.Location = new System.Drawing.Point(151, 228);
+            this.textBoxSupplierEditNotes.Name = "textBoxSupplierEditNotes";
+            this.textBoxSupplierEditNotes.Size = new System.Drawing.Size(411, 20);
+            this.textBoxSupplierEditNotes.TabIndex = 26;
+            // 
+            // textBoxSupplierEditWWW
+            // 
+            this.textBoxSupplierEditWWW.Location = new System.Drawing.Point(404, 197);
+            this.textBoxSupplierEditWWW.Name = "textBoxSupplierEditWWW";
+            this.textBoxSupplierEditWWW.Size = new System.Drawing.Size(158, 20);
+            this.textBoxSupplierEditWWW.TabIndex = 25;
+            // 
+            // textBoxSupplierEditEmail
+            // 
+            this.textBoxSupplierEditEmail.Location = new System.Drawing.Point(151, 193);
+            this.textBoxSupplierEditEmail.Name = "textBoxSupplierEditEmail";
+            this.textBoxSupplierEditEmail.Size = new System.Drawing.Size(167, 20);
+            this.textBoxSupplierEditEmail.TabIndex = 24;
+            // 
+            // textBoxSupplierEditHandy
+            // 
+            this.textBoxSupplierEditHandy.Location = new System.Drawing.Point(713, 164);
+            this.textBoxSupplierEditHandy.Name = "textBoxSupplierEditHandy";
+            this.textBoxSupplierEditHandy.Size = new System.Drawing.Size(100, 20);
+            this.textBoxSupplierEditHandy.TabIndex = 23;
+            // 
+            // textBoxSupplierEditAreaCodeHandy
+            // 
+            this.textBoxSupplierEditAreaCodeHandy.Location = new System.Drawing.Point(655, 164);
+            this.textBoxSupplierEditAreaCodeHandy.Name = "textBoxSupplierEditAreaCodeHandy";
+            this.textBoxSupplierEditAreaCodeHandy.Size = new System.Drawing.Size(52, 20);
+            this.textBoxSupplierEditAreaCodeHandy.TabIndex = 22;
+            // 
+            // textBoxSupplierEditFax
+            // 
+            this.textBoxSupplierEditFax.Location = new System.Drawing.Point(464, 164);
+            this.textBoxSupplierEditFax.Name = "textBoxSupplierEditFax";
+            this.textBoxSupplierEditFax.Size = new System.Drawing.Size(100, 20);
+            this.textBoxSupplierEditFax.TabIndex = 21;
+            // 
+            // textBoxSupplierEditAreaCodeFax
+            // 
+            this.textBoxSupplierEditAreaCodeFax.Location = new System.Drawing.Point(404, 164);
+            this.textBoxSupplierEditAreaCodeFax.Name = "textBoxSupplierEditAreaCodeFax";
+            this.textBoxSupplierEditAreaCodeFax.Size = new System.Drawing.Size(52, 20);
+            this.textBoxSupplierEditAreaCodeFax.TabIndex = 20;
+            // 
+            // textBoxSupplierEditPhone
+            // 
+            this.textBoxSupplierEditPhone.Location = new System.Drawing.Point(218, 164);
+            this.textBoxSupplierEditPhone.Name = "textBoxSupplierEditPhone";
+            this.textBoxSupplierEditPhone.Size = new System.Drawing.Size(100, 20);
+            this.textBoxSupplierEditPhone.TabIndex = 19;
+            // 
+            // textBoxSupplierEditAreaCodePhone
+            // 
+            this.textBoxSupplierEditAreaCodePhone.Location = new System.Drawing.Point(151, 164);
+            this.textBoxSupplierEditAreaCodePhone.Name = "textBoxSupplierEditAreaCodePhone";
+            this.textBoxSupplierEditAreaCodePhone.Size = new System.Drawing.Size(52, 20);
+            this.textBoxSupplierEditAreaCodePhone.TabIndex = 18;
+            // 
+            // textBoxSupplierEditCity
+            // 
+            this.textBoxSupplierEditCity.Location = new System.Drawing.Point(404, 132);
+            this.textBoxSupplierEditCity.Name = "textBoxSupplierEditCity";
+            this.textBoxSupplierEditCity.Size = new System.Drawing.Size(158, 20);
+            this.textBoxSupplierEditCity.TabIndex = 17;
+            // 
+            // textBoxSupplierEditZip
+            // 
+            this.textBoxSupplierEditZip.Location = new System.Drawing.Point(151, 132);
+            this.textBoxSupplierEditZip.Name = "textBoxSupplierEditZip";
+            this.textBoxSupplierEditZip.Size = new System.Drawing.Size(77, 20);
+            this.textBoxSupplierEditZip.TabIndex = 16;
+            // 
+            // textBoxSupplierEditHno
+            // 
+            this.textBoxSupplierEditHno.Location = new System.Drawing.Point(404, 98);
+            this.textBoxSupplierEditHno.Name = "textBoxSupplierEditHno";
+            this.textBoxSupplierEditHno.Size = new System.Drawing.Size(52, 20);
+            this.textBoxSupplierEditHno.TabIndex = 15;
+            // 
+            // textBoxSupplierEditStreet
+            // 
+            this.textBoxSupplierEditStreet.Location = new System.Drawing.Point(151, 91);
+            this.textBoxSupplierEditStreet.Name = "textBoxSupplierEditStreet";
+            this.textBoxSupplierEditStreet.Size = new System.Drawing.Size(167, 20);
+            this.textBoxSupplierEditStreet.TabIndex = 14;
+            // 
+            // textBoxSupplierEditName
+            // 
+            this.textBoxSupplierEditName.Location = new System.Drawing.Point(151, 61);
+            this.textBoxSupplierEditName.Name = "textBoxSupplierEditName";
+            this.textBoxSupplierEditName.Size = new System.Drawing.Size(167, 20);
+            this.textBoxSupplierEditName.TabIndex = 13;
             // 
             // labelSupplierEditNotes
             // 
@@ -735,118 +844,11 @@
             this.buttonLagerPositionAddSave.Text = "Speichern";
             this.buttonLagerPositionAddSave.UseVisualStyleBackColor = true;
             // 
-            // textBoxSupplierEditName
-            // 
-            this.textBoxSupplierEditName.Location = new System.Drawing.Point(151, 61);
-            this.textBoxSupplierEditName.Name = "textBoxSupplierEditName";
-            this.textBoxSupplierEditName.Size = new System.Drawing.Size(167, 20);
-            this.textBoxSupplierEditName.TabIndex = 13;
-            // 
-            // textBoxSupplierEditStreet
-            // 
-            this.textBoxSupplierEditStreet.Location = new System.Drawing.Point(151, 91);
-            this.textBoxSupplierEditStreet.Name = "textBoxSupplierEditStreet";
-            this.textBoxSupplierEditStreet.Size = new System.Drawing.Size(167, 20);
-            this.textBoxSupplierEditStreet.TabIndex = 14;
-            // 
-            // textBoxSupplierEditHno
-            // 
-            this.textBoxSupplierEditHno.Location = new System.Drawing.Point(404, 98);
-            this.textBoxSupplierEditHno.Name = "textBoxSupplierEditHno";
-            this.textBoxSupplierEditHno.Size = new System.Drawing.Size(52, 20);
-            this.textBoxSupplierEditHno.TabIndex = 15;
-            // 
-            // textBoxSupplierEditZip
-            // 
-            this.textBoxSupplierEditZip.Location = new System.Drawing.Point(151, 132);
-            this.textBoxSupplierEditZip.Name = "textBoxSupplierEditZip";
-            this.textBoxSupplierEditZip.Size = new System.Drawing.Size(77, 20);
-            this.textBoxSupplierEditZip.TabIndex = 16;
-            // 
-            // textBoxSupplierEditCity
-            // 
-            this.textBoxSupplierEditCity.Location = new System.Drawing.Point(404, 132);
-            this.textBoxSupplierEditCity.Name = "textBoxSupplierEditCity";
-            this.textBoxSupplierEditCity.Size = new System.Drawing.Size(158, 20);
-            this.textBoxSupplierEditCity.TabIndex = 17;
-            // 
-            // textBoxSupplierEditAreaCodePhone
-            // 
-            this.textBoxSupplierEditAreaCodePhone.Location = new System.Drawing.Point(151, 164);
-            this.textBoxSupplierEditAreaCodePhone.Name = "textBoxSupplierEditAreaCodePhone";
-            this.textBoxSupplierEditAreaCodePhone.Size = new System.Drawing.Size(52, 20);
-            this.textBoxSupplierEditAreaCodePhone.TabIndex = 18;
-            // 
-            // textBoxSupplierEditPhone
-            // 
-            this.textBoxSupplierEditPhone.Location = new System.Drawing.Point(218, 164);
-            this.textBoxSupplierEditPhone.Name = "textBoxSupplierEditPhone";
-            this.textBoxSupplierEditPhone.Size = new System.Drawing.Size(100, 20);
-            this.textBoxSupplierEditPhone.TabIndex = 19;
-            // 
-            // textBoxSupplierEditAreaCodeFax
-            // 
-            this.textBoxSupplierEditAreaCodeFax.Location = new System.Drawing.Point(404, 164);
-            this.textBoxSupplierEditAreaCodeFax.Name = "textBoxSupplierEditAreaCodeFax";
-            this.textBoxSupplierEditAreaCodeFax.Size = new System.Drawing.Size(52, 20);
-            this.textBoxSupplierEditAreaCodeFax.TabIndex = 20;
-            // 
-            // textBoxSupplierEditFax
-            // 
-            this.textBoxSupplierEditFax.Location = new System.Drawing.Point(464, 164);
-            this.textBoxSupplierEditFax.Name = "textBoxSupplierEditFax";
-            this.textBoxSupplierEditFax.Size = new System.Drawing.Size(100, 20);
-            this.textBoxSupplierEditFax.TabIndex = 21;
-            // 
-            // textBoxSupplierEditAreaCodeHandy
-            // 
-            this.textBoxSupplierEditAreaCodeHandy.Location = new System.Drawing.Point(655, 164);
-            this.textBoxSupplierEditAreaCodeHandy.Name = "textBoxSupplierEditAreaCodeHandy";
-            this.textBoxSupplierEditAreaCodeHandy.Size = new System.Drawing.Size(52, 20);
-            this.textBoxSupplierEditAreaCodeHandy.TabIndex = 22;
-            // 
-            // textBoxSupplierEditHandy
-            // 
-            this.textBoxSupplierEditHandy.Location = new System.Drawing.Point(713, 164);
-            this.textBoxSupplierEditHandy.Name = "textBoxSupplierEditHandy";
-            this.textBoxSupplierEditHandy.Size = new System.Drawing.Size(100, 20);
-            this.textBoxSupplierEditHandy.TabIndex = 23;
-            // 
-            // textBoxSupplierEditEmail
-            // 
-            this.textBoxSupplierEditEmail.Location = new System.Drawing.Point(151, 193);
-            this.textBoxSupplierEditEmail.Name = "textBoxSupplierEditEmail";
-            this.textBoxSupplierEditEmail.Size = new System.Drawing.Size(167, 20);
-            this.textBoxSupplierEditEmail.TabIndex = 24;
-            // 
-            // textBoxSupplierEditWWW
-            // 
-            this.textBoxSupplierEditWWW.Location = new System.Drawing.Point(404, 197);
-            this.textBoxSupplierEditWWW.Name = "textBoxSupplierEditWWW";
-            this.textBoxSupplierEditWWW.Size = new System.Drawing.Size(158, 20);
-            this.textBoxSupplierEditWWW.TabIndex = 25;
-            // 
-            // textBoxSupplierEditNotes
-            // 
-            this.textBoxSupplierEditNotes.Location = new System.Drawing.Point(151, 228);
-            this.textBoxSupplierEditNotes.Name = "textBoxSupplierEditNotes";
-            this.textBoxSupplierEditNotes.Size = new System.Drawing.Size(411, 20);
-            this.textBoxSupplierEditNotes.TabIndex = 26;
-            // 
-            // checkBoxSupplierEditDelete
-            // 
-            this.checkBoxSupplierEditDelete.AutoSize = true;
-            this.checkBoxSupplierEditDelete.Location = new System.Drawing.Point(702, 230);
-            this.checkBoxSupplierEditDelete.Name = "checkBoxSupplierEditDelete";
-            this.checkBoxSupplierEditDelete.Size = new System.Drawing.Size(111, 17);
-            this.checkBoxSupplierEditDelete.TabIndex = 27;
-            this.checkBoxSupplierEditDelete.Text = "Lieferant Löschen";
-            this.checkBoxSupplierEditDelete.UseVisualStyleBackColor = true;
-            // 
             // Lager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1128, 570);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.treeView1);

@@ -83,5 +83,29 @@ namespace ManagementTool
             Lager lagerUI = new Lager();
             lagerUI.Show();
         }
+
+        private void editierenToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Roles roleUI = new Roles();
+            roleUI.Show();
+        }
+
+        private void hinzufügenToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Roles roleUI = new Roles();
+            roleUI.Show();
+        }
+
+        private void editierenToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            User userUI = new User();
+            userUI.Show();
+        }
+
+        private void hinzufügenToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            User userUI = new User();
+            userUI.Show();
+        }
     }
 }
