@@ -28,11 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Editieren");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Erstellen");
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Editieren");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Erstellen");
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.tabControlUsers = new System.Windows.Forms.TabControl();
             this.tabPageUserEdit = new System.Windows.Forms.TabPage();
+            this.buttonUserEditSave = new System.Windows.Forms.Button();
+            this.checkBoxUserEditDelete = new System.Windows.Forms.CheckBox();
+            this.textBoxUserEditNewPassword = new System.Windows.Forms.TextBox();
+            this.textBoxUserEditOldPassword = new System.Windows.Forms.TextBox();
+            this.labelUserEditNewPassword = new System.Windows.Forms.Label();
+            this.labelUserEditOldPassword = new System.Windows.Forms.Label();
             this.checkBoxUserEditGeneratePassword = new System.Windows.Forms.CheckBox();
             this.comboBoxUserEditRole = new System.Windows.Forms.ComboBox();
             this.textBoxUserEditPassword = new System.Windows.Forms.TextBox();
@@ -47,6 +54,7 @@
             this.labelUserEditUser = new System.Windows.Forms.Label();
             this.comboBoxUserEditUsers = new System.Windows.Forms.ComboBox();
             this.tabPageUserAdd = new System.Windows.Forms.TabPage();
+            this.buttonUserAddSave = new System.Windows.Forms.Button();
             this.checkBoxUserAddGeneratePassword = new System.Windows.Forms.CheckBox();
             this.textBoxUserAddPassword = new System.Windows.Forms.TextBox();
             this.textBoxUserAddEmail = new System.Windows.Forms.TextBox();
@@ -63,17 +71,17 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.schliessenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.labelUserEditOldPassword = new System.Windows.Forms.Label();
-            this.labelUserEditNewPassword = new System.Windows.Forms.Label();
-            this.textBoxUserEditOldPassword = new System.Windows.Forms.TextBox();
-            this.textBoxUserEditNewPassword = new System.Windows.Forms.TextBox();
-            this.checkBoxUserEditDelete = new System.Windows.Forms.CheckBox();
-            this.buttonUserEditSave = new System.Windows.Forms.Button();
-            this.buttonUserAddSave = new System.Windows.Forms.Button();
+            this.checkBoxUserAddSendPasswordEmail = new System.Windows.Forms.CheckBox();
+            this.checkBoxUserEditSendPasswordEmail = new System.Windows.Forms.CheckBox();
+            this.mtdbDataSet = new ManagementTool.mtdbDataSet();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usersTableAdapter = new ManagementTool.mtdbDataSetTableAdapters.usersTableAdapter();
             this.tabControlUsers.SuspendLayout();
             this.tabPageUserEdit.SuspendLayout();
             this.tabPageUserAdd.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mtdbDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // treeView1
@@ -81,13 +89,13 @@
             this.treeView1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.treeView1.Location = new System.Drawing.Point(14, 41);
             this.treeView1.Name = "treeView1";
-            treeNode3.Name = "NodeUserEdit";
-            treeNode3.Text = "Editieren";
-            treeNode4.Name = "NodeUserAdd";
-            treeNode4.Text = "Erstellen";
+            treeNode13.Name = "NodeUserEdit";
+            treeNode13.Text = "Editieren";
+            treeNode14.Name = "NodeUserAdd";
+            treeNode14.Text = "Erstellen";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode3,
-            treeNode4});
+            treeNode13,
+            treeNode14});
             this.treeView1.Size = new System.Drawing.Size(121, 97);
             this.treeView1.TabIndex = 0;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
@@ -105,6 +113,7 @@
             // tabPageUserEdit
             // 
             this.tabPageUserEdit.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPageUserEdit.Controls.Add(this.checkBoxUserEditSendPasswordEmail);
             this.tabPageUserEdit.Controls.Add(this.buttonUserEditSave);
             this.tabPageUserEdit.Controls.Add(this.checkBoxUserEditDelete);
             this.tabPageUserEdit.Controls.Add(this.textBoxUserEditNewPassword);
@@ -131,6 +140,60 @@
             this.tabPageUserEdit.TabIndex = 0;
             this.tabPageUserEdit.Text = "Editieren";
             // 
+            // buttonUserEditSave
+            // 
+            this.buttonUserEditSave.Location = new System.Drawing.Point(386, 281);
+            this.buttonUserEditSave.Name = "buttonUserEditSave";
+            this.buttonUserEditSave.Size = new System.Drawing.Size(107, 23);
+            this.buttonUserEditSave.TabIndex = 18;
+            this.buttonUserEditSave.Text = "Speichern";
+            this.buttonUserEditSave.UseVisualStyleBackColor = true;
+            this.buttonUserEditSave.Click += new System.EventHandler(this.buttonUserEditSave_Click);
+            // 
+            // checkBoxUserEditDelete
+            // 
+            this.checkBoxUserEditDelete.AutoSize = true;
+            this.checkBoxUserEditDelete.Location = new System.Drawing.Point(37, 270);
+            this.checkBoxUserEditDelete.Name = "checkBoxUserEditDelete";
+            this.checkBoxUserEditDelete.Size = new System.Drawing.Size(88, 17);
+            this.checkBoxUserEditDelete.TabIndex = 17;
+            this.checkBoxUserEditDelete.Text = "User löschen";
+            this.checkBoxUserEditDelete.UseVisualStyleBackColor = true;
+            // 
+            // textBoxUserEditNewPassword
+            // 
+            this.textBoxUserEditNewPassword.Location = new System.Drawing.Point(128, 179);
+            this.textBoxUserEditNewPassword.Name = "textBoxUserEditNewPassword";
+            this.textBoxUserEditNewPassword.Size = new System.Drawing.Size(127, 20);
+            this.textBoxUserEditNewPassword.TabIndex = 16;
+            this.textBoxUserEditNewPassword.UseSystemPasswordChar = true;
+            // 
+            // textBoxUserEditOldPassword
+            // 
+            this.textBoxUserEditOldPassword.Location = new System.Drawing.Point(128, 148);
+            this.textBoxUserEditOldPassword.Name = "textBoxUserEditOldPassword";
+            this.textBoxUserEditOldPassword.Size = new System.Drawing.Size(127, 20);
+            this.textBoxUserEditOldPassword.TabIndex = 15;
+            this.textBoxUserEditOldPassword.UseSystemPasswordChar = true;
+            // 
+            // labelUserEditNewPassword
+            // 
+            this.labelUserEditNewPassword.AutoSize = true;
+            this.labelUserEditNewPassword.Location = new System.Drawing.Point(34, 186);
+            this.labelUserEditNewPassword.Name = "labelUserEditNewPassword";
+            this.labelUserEditNewPassword.Size = new System.Drawing.Size(84, 13);
+            this.labelUserEditNewPassword.TabIndex = 14;
+            this.labelUserEditNewPassword.Text = "Neues Passwort";
+            // 
+            // labelUserEditOldPassword
+            // 
+            this.labelUserEditOldPassword.AutoSize = true;
+            this.labelUserEditOldPassword.Location = new System.Drawing.Point(34, 151);
+            this.labelUserEditOldPassword.Name = "labelUserEditOldPassword";
+            this.labelUserEditOldPassword.Size = new System.Drawing.Size(76, 13);
+            this.labelUserEditOldPassword.TabIndex = 13;
+            this.labelUserEditOldPassword.Text = "Altes Passwort";
+            // 
             // checkBoxUserEditGeneratePassword
             // 
             this.checkBoxUserEditGeneratePassword.AutoSize = true;
@@ -140,6 +203,7 @@
             this.checkBoxUserEditGeneratePassword.TabIndex = 12;
             this.checkBoxUserEditGeneratePassword.Text = "generiere Passwort";
             this.checkBoxUserEditGeneratePassword.UseVisualStyleBackColor = true;
+            this.checkBoxUserEditGeneratePassword.CheckedChanged += new System.EventHandler(this.checkBoxUserEditGeneratePassword_CheckedChanged);
             // 
             // comboBoxUserEditRole
             // 
@@ -243,6 +307,7 @@
             // tabPageUserAdd
             // 
             this.tabPageUserAdd.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPageUserAdd.Controls.Add(this.checkBoxUserAddSendPasswordEmail);
             this.tabPageUserAdd.Controls.Add(this.buttonUserAddSave);
             this.tabPageUserAdd.Controls.Add(this.checkBoxUserAddGeneratePassword);
             this.tabPageUserAdd.Controls.Add(this.textBoxUserAddPassword);
@@ -264,6 +329,15 @@
             this.tabPageUserAdd.TabIndex = 1;
             this.tabPageUserAdd.Text = "Erstellen";
             // 
+            // buttonUserAddSave
+            // 
+            this.buttonUserAddSave.Location = new System.Drawing.Point(386, 281);
+            this.buttonUserAddSave.Name = "buttonUserAddSave";
+            this.buttonUserAddSave.Size = new System.Drawing.Size(107, 23);
+            this.buttonUserAddSave.TabIndex = 14;
+            this.buttonUserAddSave.Text = "Speichern";
+            this.buttonUserAddSave.UseVisualStyleBackColor = true;
+            // 
             // checkBoxUserAddGeneratePassword
             // 
             this.checkBoxUserAddGeneratePassword.AutoSize = true;
@@ -273,6 +347,7 @@
             this.checkBoxUserAddGeneratePassword.TabIndex = 13;
             this.checkBoxUserAddGeneratePassword.Text = "generiere Passwort";
             this.checkBoxUserAddGeneratePassword.UseVisualStyleBackColor = true;
+            this.checkBoxUserAddGeneratePassword.CheckedChanged += new System.EventHandler(this.checkBoxUserAddGeneratePassword_CheckedChanged);
             // 
             // textBoxUserAddPassword
             // 
@@ -280,6 +355,7 @@
             this.textBoxUserAddPassword.Name = "textBoxUserAddPassword";
             this.textBoxUserAddPassword.Size = new System.Drawing.Size(127, 20);
             this.textBoxUserAddPassword.TabIndex = 12;
+            this.textBoxUserAddPassword.UseSystemPasswordChar = true;
             // 
             // textBoxUserAddEmail
             // 
@@ -401,65 +477,39 @@
             this.schliessenToolStripMenuItem.Text = "Schliessen";
             this.schliessenToolStripMenuItem.Click += new System.EventHandler(this.schliessenToolStripMenuItem_Click);
             // 
-            // labelUserEditOldPassword
+            // checkBoxUserAddSendPasswordEmail
             // 
-            this.labelUserEditOldPassword.AutoSize = true;
-            this.labelUserEditOldPassword.Location = new System.Drawing.Point(34, 151);
-            this.labelUserEditOldPassword.Name = "labelUserEditOldPassword";
-            this.labelUserEditOldPassword.Size = new System.Drawing.Size(76, 13);
-            this.labelUserEditOldPassword.TabIndex = 13;
-            this.labelUserEditOldPassword.Text = "Altes Passwort";
+            this.checkBoxUserAddSendPasswordEmail.AutoSize = true;
+            this.checkBoxUserAddSendPasswordEmail.Location = new System.Drawing.Point(242, 148);
+            this.checkBoxUserAddSendPasswordEmail.Name = "checkBoxUserAddSendPasswordEmail";
+            this.checkBoxUserAddSendPasswordEmail.Size = new System.Drawing.Size(152, 17);
+            this.checkBoxUserAddSendPasswordEmail.TabIndex = 15;
+            this.checkBoxUserAddSendPasswordEmail.Text = "sende Password via e-Mail";
+            this.checkBoxUserAddSendPasswordEmail.UseVisualStyleBackColor = true;
             // 
-            // labelUserEditNewPassword
+            // checkBoxUserEditSendPasswordEmail
             // 
-            this.labelUserEditNewPassword.AutoSize = true;
-            this.labelUserEditNewPassword.Location = new System.Drawing.Point(34, 186);
-            this.labelUserEditNewPassword.Name = "labelUserEditNewPassword";
-            this.labelUserEditNewPassword.Size = new System.Drawing.Size(84, 13);
-            this.labelUserEditNewPassword.TabIndex = 14;
-            this.labelUserEditNewPassword.Text = "Neues Passwort";
+            this.checkBoxUserEditSendPasswordEmail.AutoSize = true;
+            this.checkBoxUserEditSendPasswordEmail.Location = new System.Drawing.Point(286, 212);
+            this.checkBoxUserEditSendPasswordEmail.Name = "checkBoxUserEditSendPasswordEmail";
+            this.checkBoxUserEditSendPasswordEmail.Size = new System.Drawing.Size(152, 17);
+            this.checkBoxUserEditSendPasswordEmail.TabIndex = 19;
+            this.checkBoxUserEditSendPasswordEmail.Text = "sende Password via e-Mail";
+            this.checkBoxUserEditSendPasswordEmail.UseVisualStyleBackColor = true;
             // 
-            // textBoxUserEditOldPassword
+            // mtdbDataSet
             // 
-            this.textBoxUserEditOldPassword.Location = new System.Drawing.Point(128, 148);
-            this.textBoxUserEditOldPassword.Name = "textBoxUserEditOldPassword";
-            this.textBoxUserEditOldPassword.Size = new System.Drawing.Size(127, 20);
-            this.textBoxUserEditOldPassword.TabIndex = 15;
+            this.mtdbDataSet.DataSetName = "mtdbDataSet";
+            this.mtdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // textBoxUserEditNewPassword
+            // usersBindingSource
             // 
-            this.textBoxUserEditNewPassword.Location = new System.Drawing.Point(128, 179);
-            this.textBoxUserEditNewPassword.Name = "textBoxUserEditNewPassword";
-            this.textBoxUserEditNewPassword.Size = new System.Drawing.Size(127, 20);
-            this.textBoxUserEditNewPassword.TabIndex = 16;
+            this.usersBindingSource.DataMember = "users";
+            this.usersBindingSource.DataSource = this.mtdbDataSet;
             // 
-            // checkBoxUserEditDelete
+            // usersTableAdapter
             // 
-            this.checkBoxUserEditDelete.AutoSize = true;
-            this.checkBoxUserEditDelete.Location = new System.Drawing.Point(37, 270);
-            this.checkBoxUserEditDelete.Name = "checkBoxUserEditDelete";
-            this.checkBoxUserEditDelete.Size = new System.Drawing.Size(88, 17);
-            this.checkBoxUserEditDelete.TabIndex = 17;
-            this.checkBoxUserEditDelete.Text = "User löschen";
-            this.checkBoxUserEditDelete.UseVisualStyleBackColor = true;
-            // 
-            // buttonUserEditSave
-            // 
-            this.buttonUserEditSave.Location = new System.Drawing.Point(386, 281);
-            this.buttonUserEditSave.Name = "buttonUserEditSave";
-            this.buttonUserEditSave.Size = new System.Drawing.Size(107, 23);
-            this.buttonUserEditSave.TabIndex = 18;
-            this.buttonUserEditSave.Text = "Speichern";
-            this.buttonUserEditSave.UseVisualStyleBackColor = true;
-            // 
-            // buttonUserAddSave
-            // 
-            this.buttonUserAddSave.Location = new System.Drawing.Point(386, 281);
-            this.buttonUserAddSave.Name = "buttonUserAddSave";
-            this.buttonUserAddSave.Size = new System.Drawing.Size(107, 23);
-            this.buttonUserAddSave.TabIndex = 14;
-            this.buttonUserAddSave.Text = "Speichern";
-            this.buttonUserAddSave.UseVisualStyleBackColor = true;
+            this.usersTableAdapter.ClearBeforeFill = true;
             // 
             // User
             // 
@@ -473,6 +523,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "User";
             this.Text = "User";
+            this.Load += new System.EventHandler(this.User_Load);
             this.tabControlUsers.ResumeLayout(false);
             this.tabPageUserEdit.ResumeLayout(false);
             this.tabPageUserEdit.PerformLayout();
@@ -480,6 +531,8 @@
             this.tabPageUserAdd.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mtdbDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -527,5 +580,10 @@
         private System.Windows.Forms.CheckBox checkBoxUserEditDelete;
         private System.Windows.Forms.Button buttonUserEditSave;
         private System.Windows.Forms.Button buttonUserAddSave;
+        private System.Windows.Forms.CheckBox checkBoxUserAddSendPasswordEmail;
+        private System.Windows.Forms.CheckBox checkBoxUserEditSendPasswordEmail;
+        private mtdbDataSet mtdbDataSet;
+        private System.Windows.Forms.BindingSource usersBindingSource;
+        private mtdbDataSetTableAdapters.usersTableAdapter usersTableAdapter;
     }
 }

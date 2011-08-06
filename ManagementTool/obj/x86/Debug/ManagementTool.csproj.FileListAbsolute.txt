@@ -21,3 +21,4 @@ C:\Users\sandra\Documents\ManagementTool\Code\ManagementTool\obj\x86\Debug\Gener
 C:\Users\sandra\Documents\ManagementTool\Code\ManagementTool\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\sandra\Documents\ManagementTool\Code\ManagementTool\obj\x86\Debug\ManagementTool.Roles.resources
 C:\Users\sandra\Documents\ManagementTool\Code\ManagementTool\bin\Debug\ManagementTool.exe.config
+C:\Users\sandra\Documents\ManagementTool\Code\ManagementTool\obj\x86\Debug\ManagementTool.Partners.resources

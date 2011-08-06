@@ -82,6 +82,7 @@
             this.buttonFibu.TabIndex = 3;
             this.buttonFibu.Text = "F i B u";
             this.buttonFibu.UseVisualStyleBackColor = false;
+            this.buttonFibu.Click += new System.EventHandler(this.buttonFibu_Click);
             this.buttonFibu.Paint += new System.Windows.Forms.PaintEventHandler(this.buttonFibu_Paint);
             // 
             // buttonPartner
@@ -94,6 +95,7 @@
             this.buttonPartner.TabIndex = 4;
             this.buttonPartner.Text = "Partner";
             this.buttonPartner.UseVisualStyleBackColor = false;
+            this.buttonPartner.Click += new System.EventHandler(this.buttonPartner_Click);
             this.buttonPartner.Paint += new System.Windows.Forms.PaintEventHandler(this.buttonPartner_Paint);
             // 
             // buttonCustomers
@@ -106,6 +108,7 @@
             this.buttonCustomers.TabIndex = 5;
             this.buttonCustomers.Text = "Kunden";
             this.buttonCustomers.UseVisualStyleBackColor = false;
+            this.buttonCustomers.Click += new System.EventHandler(this.buttonCustomers_Click);
             this.buttonCustomers.Paint += new System.Windows.Forms.PaintEventHandler(this.buttonCustomer_Paint);
             // 
             // buttonToDo
@@ -118,6 +121,7 @@
             this.buttonToDo.TabIndex = 6;
             this.buttonToDo.Text = "To Do";
             this.buttonToDo.UseVisualStyleBackColor = false;
+            this.buttonToDo.Click += new System.EventHandler(this.buttonToDo_Click);
             this.buttonToDo.Paint += new System.Windows.Forms.PaintEventHandler(this.buttonToDo_Paint);
             // 
             // menuStrip1
@@ -143,7 +147,7 @@
             // quitToolStripMenuItem
             // 
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.quitToolStripMenuItem.Text = "Schliessen";
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
             // 
@@ -162,20 +166,20 @@
             this.editierenToolStripMenuItem1,
             this.hinzufügenToolStripMenuItem1});
             this.rollenToolStripMenuItem.Name = "rollenToolStripMenuItem";
-            this.rollenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.rollenToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.rollenToolStripMenuItem.Text = "Rollen";
             // 
             // editierenToolStripMenuItem1
             // 
             this.editierenToolStripMenuItem1.Name = "editierenToolStripMenuItem1";
-            this.editierenToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.editierenToolStripMenuItem1.Size = new System.Drawing.Size(136, 22);
             this.editierenToolStripMenuItem1.Text = "Editieren";
             this.editierenToolStripMenuItem1.Click += new System.EventHandler(this.editierenToolStripMenuItem1_Click);
             // 
             // hinzufügenToolStripMenuItem1
             // 
             this.hinzufügenToolStripMenuItem1.Name = "hinzufügenToolStripMenuItem1";
-            this.hinzufügenToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.hinzufügenToolStripMenuItem1.Size = new System.Drawing.Size(136, 22);
             this.hinzufügenToolStripMenuItem1.Text = "Hinzufügen";
             this.hinzufügenToolStripMenuItem1.Click += new System.EventHandler(this.hinzufügenToolStripMenuItem1_Click);
             // 
@@ -185,7 +189,7 @@
             this.editierenToolStripMenuItem2,
             this.hinzufügenToolStripMenuItem2});
             this.userToolStripMenuItem.Name = "userToolStripMenuItem";
-            this.userToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.userToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.userToolStripMenuItem.Text = "User";
             // 
             // editierenToolStripMenuItem2

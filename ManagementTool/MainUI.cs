@@ -100,12 +100,38 @@ namespace ManagementTool
         {
             User userUI = new User();
             userUI.Show();
+            //entsprechendes tab anzeigen lassen 
         }
 
         private void hinzufügenToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             User userUI = new User();
             userUI.Show();
+            //entsprechendes tab anzeigen lassen 
+        }
+
+        private void buttonPartner_Click(object sender, EventArgs e)
+        {
+            Partners parnterUI = new Partners();
+            parnterUI.Show();
+        }
+
+        private void buttonCustomers_Click(object sender, EventArgs e)
+        {
+            Customer customerUI = new Customer();
+            customerUI.Show();
+        }
+
+        private void buttonFibu_Click(object sender, EventArgs e)
+        {
+            Fibu fibuUI = new Fibu();
+            fibuUI.Show();
+        }
+
+        private void buttonToDo_Click(object sender, EventArgs e)
+        {
+            ToDos todosUI = new ToDos();
+            todosUI.Show();
         }
     }
 }

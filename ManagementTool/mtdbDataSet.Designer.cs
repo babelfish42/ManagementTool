@@ -432,7 +432,7 @@ namespace ManagementTool {
                         this.tableaddresses.adr_typeColumn}, false);
             this.Relations.Add(this.relationfk_adr_re);
             this.relationfk_pe_adr = new global::System.Data.DataRelation("fk_pe_adr", new global::System.Data.DataColumn[] {
-                        this.tableaddresses.su_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableaddresses.adr_idColumn}, new global::System.Data.DataColumn[] {
                         this.tablepersons.pe_adr_idColumn}, false);
             this.Relations.Add(this.relationfk_pe_adr);
             this.relationfk_pe_re = new global::System.Data.DataRelation("fk_pe_re", new global::System.Data.DataColumn[] {
@@ -440,7 +440,7 @@ namespace ManagementTool {
                         this.tablepersons.pe_typeColumn}, false);
             this.Relations.Add(this.relationfk_pe_re);
             this.relationfk_ph_adr = new global::System.Data.DataRelation("fk_ph_adr", new global::System.Data.DataColumn[] {
-                        this.tableaddresses.su_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableaddresses.adr_idColumn}, new global::System.Data.DataColumn[] {
                         this.tablephones.ph_adr_idColumn}, false);
             this.Relations.Add(this.relationfk_ph_adr);
             this.relationfk_ph_pe = new global::System.Data.DataRelation("fk_ph_pe", new global::System.Data.DataColumn[] {
@@ -464,7 +464,7 @@ namespace ManagementTool {
                         this.tableroles.ro_us_idColumn}, false);
             this.Relations.Add(this.relationfk_ro_us);
             this.relationfk_www_adr = new global::System.Data.DataRelation("fk_www_adr", new global::System.Data.DataColumn[] {
-                        this.tableaddresses.su_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableaddresses.adr_idColumn}, new global::System.Data.DataColumn[] {
                         this.tablewww.www_adr_idColumn}, false);
             this.Relations.Add(this.relationfk_www_adr);
             this.relationfk_www_pe = new global::System.Data.DataRelation("fk_www_pe", new global::System.Data.DataColumn[] {
@@ -615,11 +615,11 @@ namespace ManagementTool {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class addressesDataTable : global::System.Data.TypedTableBase<addressesRow> {
             
-            private global::System.Data.DataColumn columnsu_id;
+            private global::System.Data.DataColumn columnadr_id;
             
             private global::System.Data.DataColumn columnadr_type;
             
-            private global::System.Data.DataColumn columnsu_name;
+            private global::System.Data.DataColumn columnadr_name;
             
             private global::System.Data.DataColumn columnadr_street;
             
@@ -629,13 +629,15 @@ namespace ManagementTool {
             
             private global::System.Data.DataColumn columnadr_city;
             
+            private global::System.Data.DataColumn columnadr_countryCode;
+            
             private global::System.Data.DataColumn columnadr_comment;
             
             private global::System.Data.DataColumn columnadr_deleted;
             
             private global::System.Data.DataColumn columnadr_date_inserted;
             
-            private global::System.Data.DataColumn columnadr_id_inserted;
+            private global::System.Data.DataColumn columnadr_us_inserted;
             
             private global::System.Data.DataColumn columnadr_date_modified;
             
@@ -643,7 +645,7 @@ namespace ManagementTool {
             
             private global::System.Data.DataColumn columnadr_date_deleted;
             
-            private global::System.Data.DataColumn columnadr_id_deleted;
+            private global::System.Data.DataColumn columnadr_us_deleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -680,9 +682,9 @@ namespace ManagementTool {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn su_idColumn {
+            public global::System.Data.DataColumn adr_idColumn {
                 get {
-                    return this.columnsu_id;
+                    return this.columnadr_id;
                 }
             }
             
@@ -696,9 +698,9 @@ namespace ManagementTool {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn su_nameColumn {
+            public global::System.Data.DataColumn adr_nameColumn {
                 get {
-                    return this.columnsu_name;
+                    return this.columnadr_name;
                 }
             }
             
@@ -736,6 +738,14 @@ namespace ManagementTool {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn adr_countryCodeColumn {
+                get {
+                    return this.columnadr_countryCode;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn adr_commentColumn {
                 get {
                     return this.columnadr_comment;
@@ -760,9 +770,9 @@ namespace ManagementTool {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn adr_id_insertedColumn {
+            public global::System.Data.DataColumn adr_us_insertedColumn {
                 get {
-                    return this.columnadr_id_inserted;
+                    return this.columnadr_us_inserted;
                 }
             }
             
@@ -792,9 +802,9 @@ namespace ManagementTool {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn adr_id_deletedColumn {
+            public global::System.Data.DataColumn adr_us_deletedColumn {
                 get {
-                    return this.columnadr_id_deleted;
+                    return this.columnadr_us_deleted;
                 }
             }
             
@@ -835,24 +845,25 @@ namespace ManagementTool {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public addressesRow AddaddressesRow(referencesRow parentreferencesRowByfk_adr_re, string su_name, string adr_street, string adr_hno, int adr_zip, string adr_city, string adr_comment, int adr_deleted, System.DateTime adr_date_inserted, int adr_id_inserted, System.DateTime adr_date_modified, int adr_id_modified, System.DateTime adr_date_deleted, int adr_id_deleted) {
+            public addressesRow AddaddressesRow(referencesRow parentreferencesRowByfk_adr_re, string adr_name, string adr_street, string adr_hno, int adr_zip, string adr_city, string adr_countryCode, string adr_comment, int adr_deleted, System.DateTime adr_date_inserted, int adr_us_inserted, System.DateTime adr_date_modified, int adr_id_modified, System.DateTime adr_date_deleted, int adr_us_deleted) {
                 addressesRow rowaddressesRow = ((addressesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
-                        su_name,
+                        adr_name,
                         adr_street,
                         adr_hno,
                         adr_zip,
                         adr_city,
+                        adr_countryCode,
                         adr_comment,
                         adr_deleted,
                         adr_date_inserted,
-                        adr_id_inserted,
+                        adr_us_inserted,
                         adr_date_modified,
                         adr_id_modified,
                         adr_date_deleted,
-                        adr_id_deleted};
+                        adr_us_deleted};
                 if ((parentreferencesRowByfk_adr_re != null)) {
                     columnValuesArray[1] = parentreferencesRowByfk_adr_re[0];
                 }
@@ -863,9 +874,9 @@ namespace ManagementTool {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public addressesRow FindBysu_id(int su_id) {
+            public addressesRow FindByadr_id(int adr_id) {
                 return ((addressesRow)(this.Rows.Find(new object[] {
-                            su_id})));
+                            adr_id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -885,32 +896,33 @@ namespace ManagementTool {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnsu_id = base.Columns["su_id"];
+                this.columnadr_id = base.Columns["adr_id"];
                 this.columnadr_type = base.Columns["adr_type"];
-                this.columnsu_name = base.Columns["su_name"];
+                this.columnadr_name = base.Columns["adr_name"];
                 this.columnadr_street = base.Columns["adr_street"];
                 this.columnadr_hno = base.Columns["adr_hno"];
                 this.columnadr_zip = base.Columns["adr_zip"];
                 this.columnadr_city = base.Columns["adr_city"];
+                this.columnadr_countryCode = base.Columns["adr_countryCode"];
                 this.columnadr_comment = base.Columns["adr_comment"];
                 this.columnadr_deleted = base.Columns["adr_deleted"];
                 this.columnadr_date_inserted = base.Columns["adr_date_inserted"];
-                this.columnadr_id_inserted = base.Columns["adr_id_inserted"];
+                this.columnadr_us_inserted = base.Columns["adr_us_inserted"];
                 this.columnadr_date_modified = base.Columns["adr_date_modified"];
                 this.columnadr_id_modified = base.Columns["adr_id_modified"];
                 this.columnadr_date_deleted = base.Columns["adr_date_deleted"];
-                this.columnadr_id_deleted = base.Columns["adr_id_deleted"];
+                this.columnadr_us_deleted = base.Columns["adr_us_deleted"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnsu_id = new global::System.Data.DataColumn("su_id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnsu_id);
+                this.columnadr_id = new global::System.Data.DataColumn("adr_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnadr_id);
                 this.columnadr_type = new global::System.Data.DataColumn("adr_type", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnadr_type);
-                this.columnsu_name = new global::System.Data.DataColumn("su_name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnsu_name);
+                this.columnadr_name = new global::System.Data.DataColumn("adr_name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnadr_name);
                 this.columnadr_street = new global::System.Data.DataColumn("adr_street", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnadr_street);
                 this.columnadr_hno = new global::System.Data.DataColumn("adr_hno", typeof(string), null, global::System.Data.MappingType.Element);
@@ -919,38 +931,42 @@ namespace ManagementTool {
                 base.Columns.Add(this.columnadr_zip);
                 this.columnadr_city = new global::System.Data.DataColumn("adr_city", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnadr_city);
+                this.columnadr_countryCode = new global::System.Data.DataColumn("adr_countryCode", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnadr_countryCode);
                 this.columnadr_comment = new global::System.Data.DataColumn("adr_comment", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnadr_comment);
                 this.columnadr_deleted = new global::System.Data.DataColumn("adr_deleted", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnadr_deleted);
                 this.columnadr_date_inserted = new global::System.Data.DataColumn("adr_date_inserted", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnadr_date_inserted);
-                this.columnadr_id_inserted = new global::System.Data.DataColumn("adr_id_inserted", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnadr_id_inserted);
+                this.columnadr_us_inserted = new global::System.Data.DataColumn("adr_us_inserted", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnadr_us_inserted);
                 this.columnadr_date_modified = new global::System.Data.DataColumn("adr_date_modified", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnadr_date_modified);
                 this.columnadr_id_modified = new global::System.Data.DataColumn("adr_id_modified", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnadr_id_modified);
                 this.columnadr_date_deleted = new global::System.Data.DataColumn("adr_date_deleted", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnadr_date_deleted);
-                this.columnadr_id_deleted = new global::System.Data.DataColumn("adr_id_deleted", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnadr_id_deleted);
+                this.columnadr_us_deleted = new global::System.Data.DataColumn("adr_us_deleted", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnadr_us_deleted);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnsu_id}, true));
-                this.columnsu_id.AutoIncrement = true;
-                this.columnsu_id.AutoIncrementSeed = -1;
-                this.columnsu_id.AutoIncrementStep = -1;
-                this.columnsu_id.AllowDBNull = false;
-                this.columnsu_id.Unique = true;
+                                this.columnadr_id}, true));
+                this.columnadr_id.AutoIncrement = true;
+                this.columnadr_id.AutoIncrementSeed = -1;
+                this.columnadr_id.AutoIncrementStep = -1;
+                this.columnadr_id.AllowDBNull = false;
+                this.columnadr_id.Unique = true;
                 this.columnadr_type.AllowDBNull = false;
-                this.columnsu_name.AllowDBNull = false;
-                this.columnsu_name.MaxLength = 255;
+                this.columnadr_name.AllowDBNull = false;
+                this.columnadr_name.MaxLength = 255;
                 this.columnadr_street.MaxLength = 255;
                 this.columnadr_hno.MaxLength = 10;
                 this.columnadr_city.MaxLength = 255;
+                this.columnadr_countryCode.AllowDBNull = false;
+                this.columnadr_countryCode.MaxLength = 255;
                 this.columnadr_comment.MaxLength = 500;
                 this.columnadr_date_inserted.AllowDBNull = false;
-                this.columnadr_id_inserted.AllowDBNull = false;
+                this.columnadr_us_inserted.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1102,6 +1118,8 @@ namespace ManagementTool {
             
             private global::System.Data.DataColumn columnpe_city;
             
+            private global::System.Data.DataColumn columnpe_countryCode;
+            
             private global::System.Data.DataColumn columnpe_deleted;
             
             private global::System.Data.DataColumn columnpe_date_inserted;
@@ -1223,6 +1241,14 @@ namespace ManagementTool {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn pe_countryCodeColumn {
+                get {
+                    return this.columnpe_countryCode;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn pe_deletedColumn {
                 get {
                     return this.columnpe_deleted;
@@ -1314,7 +1340,23 @@ namespace ManagementTool {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public personsRow AddpersonsRow(referencesRow parentreferencesRowByfk_pe_re, addressesRow parentaddressesRowByfk_pe_adr, string pe_name, string pe_firstname, string pe_street, string pe_hno, int pe_zip, string pe_city, int pe_deleted, System.DateTime pe_date_inserted, int pe_us_inserted, System.DateTime pe_date_modified, int pe_us_modified, System.DateTime pe_date_deleted, int pe_us_deleted) {
+            public personsRow AddpersonsRow(
+                        referencesRow parentreferencesRowByfk_pe_re, 
+                        addressesRow parentaddressesRowByfk_pe_adr, 
+                        string pe_name, 
+                        string pe_firstname, 
+                        string pe_street, 
+                        string pe_hno, 
+                        int pe_zip, 
+                        string pe_city, 
+                        string pe_countryCode, 
+                        int pe_deleted, 
+                        System.DateTime pe_date_inserted, 
+                        int pe_us_inserted, 
+                        System.DateTime pe_date_modified, 
+                        int pe_us_modified, 
+                        System.DateTime pe_date_deleted, 
+                        int pe_us_deleted) {
                 personsRow rowpersonsRow = ((personsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1326,6 +1368,7 @@ namespace ManagementTool {
                         pe_hno,
                         pe_zip,
                         pe_city,
+                        pe_countryCode,
                         pe_deleted,
                         pe_date_inserted,
                         pe_us_inserted,
@@ -1377,6 +1420,7 @@ namespace ManagementTool {
                 this.columnpe_hno = base.Columns["pe_hno"];
                 this.columnpe_zip = base.Columns["pe_zip"];
                 this.columnpe_city = base.Columns["pe_city"];
+                this.columnpe_countryCode = base.Columns["pe_countryCode"];
                 this.columnpe_deleted = base.Columns["pe_deleted"];
                 this.columnpe_date_inserted = base.Columns["pe_date_inserted"];
                 this.columnpe_us_inserted = base.Columns["pe_us_inserted"];
@@ -1407,6 +1451,8 @@ namespace ManagementTool {
                 base.Columns.Add(this.columnpe_zip);
                 this.columnpe_city = new global::System.Data.DataColumn("pe_city", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpe_city);
+                this.columnpe_countryCode = new global::System.Data.DataColumn("pe_countryCode", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpe_countryCode);
                 this.columnpe_deleted = new global::System.Data.DataColumn("pe_deleted", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpe_deleted);
                 this.columnpe_date_inserted = new global::System.Data.DataColumn("pe_date_inserted", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
@@ -1435,6 +1481,8 @@ namespace ManagementTool {
                 this.columnpe_street.MaxLength = 255;
                 this.columnpe_hno.MaxLength = 10;
                 this.columnpe_city.MaxLength = 255;
+                this.columnpe_countryCode.AllowDBNull = false;
+                this.columnpe_countryCode.MaxLength = 255;
                 this.columnpe_date_inserted.AllowDBNull = false;
                 this.columnpe_us_inserted.AllowDBNull = false;
             }
@@ -1780,7 +1828,7 @@ namespace ManagementTool {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public phonesRow AddphonesRow(addressesRow parentaddressesRowByfk_ph_adr, personsRow parentpersonsRowByfk_ph_pe, usersRow parentusersRowByfk_ph_us, referencesRow parentreferencesRowByfk_ph_re, int ph_areaCode, int ph_phone, int ph_deleted, System.DateTime ph_date_inserted, int ph_us_inserted, System.DateTime ph_date_modified, int ph_us_modified, System.DateTime ph_date_deleted, int ph_us_deleted) {
+            public phonesRow AddphonesRow(addressesRow parentaddressesRowByfk_ph_adr, personsRow parentpersonsRowByfk_ph_pe, usersRow parentusersRowByfk_ph_us, referencesRow parentreferencesRowByfk_ph_re, string ph_areaCode, int ph_phone, int ph_deleted, System.DateTime ph_date_inserted, int ph_us_inserted, System.DateTime ph_date_modified, int ph_us_modified, System.DateTime ph_date_deleted, int ph_us_deleted) {
                 phonesRow rowphonesRow = ((phonesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1816,9 +1864,10 @@ namespace ManagementTool {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public phonesRow FindByph_id(int ph_id) {
+            public phonesRow FindByph_idph_phoneType(int ph_id, int ph_phoneType) {
                 return ((phonesRow)(this.Rows.Find(new object[] {
-                            ph_id})));
+                            ph_id,
+                            ph_phoneType})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1867,7 +1916,7 @@ namespace ManagementTool {
                 base.Columns.Add(this.columnph_us_id);
                 this.columnph_phoneType = new global::System.Data.DataColumn("ph_phoneType", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnph_phoneType);
-                this.columnph_areaCode = new global::System.Data.DataColumn("ph_areaCode", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnph_areaCode = new global::System.Data.DataColumn("ph_areaCode", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnph_areaCode);
                 this.columnph_phone = new global::System.Data.DataColumn("ph_phone", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnph_phone);
@@ -1886,14 +1935,14 @@ namespace ManagementTool {
                 this.columnph_us_deleted = new global::System.Data.DataColumn("ph_us_deleted", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnph_us_deleted);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnph_id}, true));
+                                this.columnph_id,
+                                this.columnph_phoneType}, true));
                 this.columnph_id.AutoIncrement = true;
                 this.columnph_id.AutoIncrementSeed = -1;
                 this.columnph_id.AutoIncrementStep = -1;
                 this.columnph_id.AllowDBNull = false;
-                this.columnph_id.Unique = true;
                 this.columnph_phoneType.AllowDBNull = false;
-                this.columnph_areaCode.AllowDBNull = false;
+                this.columnph_areaCode.MaxLength = 10;
                 this.columnph_phone.AllowDBNull = false;
                 this.columnph_date_inserted.AllowDBNull = false;
                 this.columnph_us_inserted.AllowDBNull = false;
@@ -3205,7 +3254,11 @@ namespace ManagementTool {
             
             private global::System.Data.DataColumn columnus_firstname;
             
+            private global::System.Data.DataColumn columnus_username;
+            
             private global::System.Data.DataColumn columnus_password;
+            
+            private global::System.Data.DataColumn columnus_deleted;
             
             private global::System.Data.DataColumn columnus_date_inserted;
             
@@ -3278,9 +3331,25 @@ namespace ManagementTool {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn us_usernameColumn {
+                get {
+                    return this.columnus_username;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn us_passwordColumn {
                 get {
                     return this.columnus_password;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn us_deletedColumn {
+                get {
+                    return this.columnus_deleted;
                 }
             }
             
@@ -3369,13 +3438,15 @@ namespace ManagementTool {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public usersRow AddusersRow(string us_name, string us_firstname, string us_password, System.DateTime us_date_inserted, int us_us_inserted, System.DateTime us_date_modified, int us_us_modified, System.DateTime us_date_deleted, int us_us_deleted) {
+            public usersRow AddusersRow(string us_name, string us_firstname, string us_username, string us_password, int us_deleted, System.DateTime us_date_inserted, int us_us_inserted, System.DateTime us_date_modified, int us_us_modified, System.DateTime us_date_deleted, int us_us_deleted) {
                 usersRow rowusersRow = ((usersRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         us_name,
                         us_firstname,
+                        us_username,
                         us_password,
+                        us_deleted,
                         us_date_inserted,
                         us_us_inserted,
                         us_date_modified,
@@ -3414,7 +3485,9 @@ namespace ManagementTool {
                 this.columnus_id = base.Columns["us_id"];
                 this.columnus_name = base.Columns["us_name"];
                 this.columnus_firstname = base.Columns["us_firstname"];
+                this.columnus_username = base.Columns["us_username"];
                 this.columnus_password = base.Columns["us_password"];
+                this.columnus_deleted = base.Columns["us_deleted"];
                 this.columnus_date_inserted = base.Columns["us_date_inserted"];
                 this.columnus_us_inserted = base.Columns["us_us_inserted"];
                 this.columnus_date_modified = base.Columns["us_date_modified"];
@@ -3432,8 +3505,12 @@ namespace ManagementTool {
                 base.Columns.Add(this.columnus_name);
                 this.columnus_firstname = new global::System.Data.DataColumn("us_firstname", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnus_firstname);
+                this.columnus_username = new global::System.Data.DataColumn("us_username", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnus_username);
                 this.columnus_password = new global::System.Data.DataColumn("us_password", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnus_password);
+                this.columnus_deleted = new global::System.Data.DataColumn("us_deleted", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnus_deleted);
                 this.columnus_date_inserted = new global::System.Data.DataColumn("us_date_inserted", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnus_date_inserted);
                 this.columnus_us_inserted = new global::System.Data.DataColumn("us_us_inserted", typeof(int), null, global::System.Data.MappingType.Element);
@@ -3455,8 +3532,11 @@ namespace ManagementTool {
                 this.columnus_id.Unique = true;
                 this.columnus_name.MaxLength = 255;
                 this.columnus_firstname.MaxLength = 255;
+                this.columnus_username.AllowDBNull = false;
+                this.columnus_username.MaxLength = 255;
                 this.columnus_password.AllowDBNull = false;
                 this.columnus_password.MaxLength = 255;
+                this.columnus_deleted.AllowDBNull = false;
                 this.columnus_date_inserted.AllowDBNull = false;
                 this.columnus_us_inserted.AllowDBNull = false;
             }
@@ -4047,12 +4127,12 @@ namespace ManagementTool {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int su_id {
+            public int adr_id {
                 get {
-                    return ((int)(this[this.tableaddresses.su_idColumn]));
+                    return ((int)(this[this.tableaddresses.adr_idColumn]));
                 }
                 set {
-                    this[this.tableaddresses.su_idColumn] = value;
+                    this[this.tableaddresses.adr_idColumn] = value;
                 }
             }
             
@@ -4069,12 +4149,12 @@ namespace ManagementTool {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string su_name {
+            public string adr_name {
                 get {
-                    return ((string)(this[this.tableaddresses.su_nameColumn]));
+                    return ((string)(this[this.tableaddresses.adr_nameColumn]));
                 }
                 set {
-                    this[this.tableaddresses.su_nameColumn] = value;
+                    this[this.tableaddresses.adr_nameColumn] = value;
                 }
             }
             
@@ -4144,6 +4224,17 @@ namespace ManagementTool {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string adr_countryCode {
+                get {
+                    return ((string)(this[this.tableaddresses.adr_countryCodeColumn]));
+                }
+                set {
+                    this[this.tableaddresses.adr_countryCodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string adr_comment {
                 get {
                     try {
@@ -4187,12 +4278,12 @@ namespace ManagementTool {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int adr_id_inserted {
+            public int adr_us_inserted {
                 get {
-                    return ((int)(this[this.tableaddresses.adr_id_insertedColumn]));
+                    return ((int)(this[this.tableaddresses.adr_us_insertedColumn]));
                 }
                 set {
-                    this[this.tableaddresses.adr_id_insertedColumn] = value;
+                    this[this.tableaddresses.adr_us_insertedColumn] = value;
                 }
             }
             
@@ -4246,17 +4337,17 @@ namespace ManagementTool {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int adr_id_deleted {
+            public int adr_us_deleted {
                 get {
                     try {
-                        return ((int)(this[this.tableaddresses.adr_id_deletedColumn]));
+                        return ((int)(this[this.tableaddresses.adr_us_deletedColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'adr_id_deleted\' in table \'addresses\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'adr_us_deleted\' in table \'addresses\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableaddresses.adr_id_deletedColumn] = value;
+                    this[this.tableaddresses.adr_us_deletedColumn] = value;
                 }
             }
             
@@ -4381,14 +4472,14 @@ namespace ManagementTool {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isadr_id_deletedNull() {
-                return this.IsNull(this.tableaddresses.adr_id_deletedColumn);
+            public bool Isadr_us_deletedNull() {
+                return this.IsNull(this.tableaddresses.adr_us_deletedColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setadr_id_deletedNull() {
-                this[this.tableaddresses.adr_id_deletedColumn] = global::System.Convert.DBNull;
+            public void Setadr_us_deletedNull() {
+                this[this.tableaddresses.adr_us_deletedColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4565,6 +4656,17 @@ namespace ManagementTool {
                 }
                 set {
                     this[this.tablepersons.pe_cityColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string pe_countryCode {
+                get {
+                    return ((string)(this[this.tablepersons.pe_countryCodeColumn]));
+                }
+                set {
+                    this[this.tablepersons.pe_countryCodeColumn] = value;
                 }
             }
             
@@ -4933,9 +5035,14 @@ namespace ManagementTool {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int ph_areaCode {
+            public string ph_areaCode {
                 get {
-                    return ((int)(this[this.tablephones.ph_areaCodeColumn]));
+                    try {
+                        return ((string)(this[this.tablephones.ph_areaCodeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ph_areaCode\' in table \'phones\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tablephones.ph_areaCodeColumn] = value;
@@ -5133,6 +5240,18 @@ namespace ManagementTool {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setph_us_idNull() {
                 this[this.tablephones.ph_us_idColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isph_areaCodeNull() {
+                return this.IsNull(this.tablephones.ph_areaCodeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setph_areaCodeNull() {
+                this[this.tablephones.ph_areaCodeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6019,12 +6138,34 @@ namespace ManagementTool {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string us_username {
+                get {
+                    return ((string)(this[this.tableusers.us_usernameColumn]));
+                }
+                set {
+                    this[this.tableusers.us_usernameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string us_password {
                 get {
                     return ((string)(this[this.tableusers.us_passwordColumn]));
                 }
                 set {
                     this[this.tableusers.us_passwordColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int us_deleted {
+                get {
+                    return ((int)(this[this.tableusers.us_deletedColumn]));
+                }
+                set {
+                    this[this.tableusers.us_deletedColumn] = value;
                 }
             }
             
@@ -6955,32 +7096,33 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "addresses";
-            tableMapping.ColumnMappings.Add("su_id", "su_id");
+            tableMapping.ColumnMappings.Add("adr_id", "adr_id");
             tableMapping.ColumnMappings.Add("adr_type", "adr_type");
-            tableMapping.ColumnMappings.Add("su_name", "su_name");
+            tableMapping.ColumnMappings.Add("adr_name", "adr_name");
             tableMapping.ColumnMappings.Add("adr_street", "adr_street");
             tableMapping.ColumnMappings.Add("adr_hno", "adr_hno");
             tableMapping.ColumnMappings.Add("adr_zip", "adr_zip");
             tableMapping.ColumnMappings.Add("adr_city", "adr_city");
+            tableMapping.ColumnMappings.Add("adr_countryCode", "adr_countryCode");
             tableMapping.ColumnMappings.Add("adr_comment", "adr_comment");
             tableMapping.ColumnMappings.Add("adr_deleted", "adr_deleted");
             tableMapping.ColumnMappings.Add("adr_date_inserted", "adr_date_inserted");
-            tableMapping.ColumnMappings.Add("adr_id_inserted", "adr_id_inserted");
+            tableMapping.ColumnMappings.Add("adr_us_inserted", "adr_us_inserted");
             tableMapping.ColumnMappings.Add("adr_date_modified", "adr_date_modified");
             tableMapping.ColumnMappings.Add("adr_id_modified", "adr_id_modified");
             tableMapping.ColumnMappings.Add("adr_date_deleted", "adr_date_deleted");
-            tableMapping.ColumnMappings.Add("adr_id_deleted", "adr_id_deleted");
+            tableMapping.ColumnMappings.Add("adr_us_deleted", "adr_us_deleted");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `addresses` WHERE ((`su_id` = @Original_su_id) AND (`adr_type` = @Original_adr_type) AND (`su_name` = @Original_su_name) AND ((@IsNull_adr_street = 1 AND `adr_street` IS NULL) OR (`adr_street` = @Original_adr_street)) AND ((@IsNull_adr_hno = 1 AND `adr_hno` IS NULL) OR (`adr_hno` = @Original_adr_hno)) AND ((@IsNull_adr_zip = 1 AND `adr_zip` IS NULL) OR (`adr_zip` = @Original_adr_zip)) AND ((@IsNull_adr_city = 1 AND `adr_city` IS NULL) OR (`adr_city` = @Original_adr_city)) AND ((@IsNull_adr_comment = 1 AND `adr_comment` IS NULL) OR (`adr_comment` = @Original_adr_comment)) AND ((@IsNull_adr_deleted = 1 AND `adr_deleted` IS NULL) OR (`adr_deleted` = @Original_adr_deleted)) AND (`adr_date_inserted` = @Original_adr_date_inserted) AND (`adr_id_inserted` = @Original_adr_id_inserted) AND ((@IsNull_adr_date_modified = 1 AND `adr_date_modified` IS NULL) OR (`adr_date_modified` = @Original_adr_date_modified)) AND ((@IsNull_adr_id_modified = 1 AND `adr_id_modified` IS NULL) OR (`adr_id_modified` = @Original_adr_id_modified)) AND ((@IsNull_adr_date_deleted = 1 AND `adr_date_deleted` IS NULL) OR (`adr_date_deleted` = @Original_adr_date_deleted)) AND ((@IsNull_adr_id_deleted = 1 AND `adr_id_deleted` IS NULL) OR (`adr_id_deleted` = @Original_adr_id_deleted)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `addresses` WHERE ((`adr_id` = @Original_adr_id) AND (`adr_type` = @Original_adr_type) AND (`adr_name` = @Original_adr_name) AND ((@IsNull_adr_street = 1 AND `adr_street` IS NULL) OR (`adr_street` = @Original_adr_street)) AND ((@IsNull_adr_hno = 1 AND `adr_hno` IS NULL) OR (`adr_hno` = @Original_adr_hno)) AND ((@IsNull_adr_zip = 1 AND `adr_zip` IS NULL) OR (`adr_zip` = @Original_adr_zip)) AND ((@IsNull_adr_city = 1 AND `adr_city` IS NULL) OR (`adr_city` = @Original_adr_city)) AND (`adr_countryCode` = @Original_adr_countryCode) AND ((@IsNull_adr_comment = 1 AND `adr_comment` IS NULL) OR (`adr_comment` = @Original_adr_comment)) AND ((@IsNull_adr_deleted = 1 AND `adr_deleted` IS NULL) OR (`adr_deleted` = @Original_adr_deleted)) AND (`adr_date_inserted` = @Original_adr_date_inserted) AND (`adr_us_inserted` = @Original_adr_us_inserted) AND ((@IsNull_adr_date_modified = 1 AND `adr_date_modified` IS NULL) OR (`adr_date_modified` = @Original_adr_date_modified)) AND ((@IsNull_adr_id_modified = 1 AND `adr_id_modified` IS NULL) OR (`adr_id_modified` = @Original_adr_id_modified)) AND ((@IsNull_adr_date_deleted = 1 AND `adr_date_deleted` IS NULL) OR (`adr_date_deleted` = @Original_adr_date_deleted)) AND ((@IsNull_adr_us_deleted = 1 AND `adr_us_deleted` IS NULL) OR (`adr_us_deleted` = @Original_adr_us_deleted)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Original_su_id";
+            param.ParameterName = "@Original_adr_id";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "su_id";
+            param.SourceColumn = "adr_id";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -6992,11 +7134,11 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Original_su_name";
+            param.ParameterName = "@Original_adr_name";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "su_name";
+            param.SourceColumn = "adr_name";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -7068,6 +7210,14 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Original_adr_countryCode";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "adr_countryCode";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@IsNull_adr_comment";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
@@ -7110,11 +7260,11 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Original_adr_id_inserted";
+            param.ParameterName = "@Original_adr_us_inserted";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "adr_id_inserted";
+            param.SourceColumn = "adr_us_inserted";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -7169,25 +7319,25 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@IsNull_adr_id_deleted";
+            param.ParameterName = "@IsNull_adr_us_deleted";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "adr_id_deleted";
+            param.SourceColumn = "adr_us_deleted";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             param.SourceColumnNullMapping = true;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Original_adr_id_deleted";
+            param.ParameterName = "@Original_adr_us_deleted";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "adr_id_deleted";
+            param.SourceColumn = "adr_us_deleted";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO `addresses` (`adr_type`, `su_name`, `adr_street`, `adr_hno`, `adr_zip`, `adr_city`, `adr_comment`, `adr_deleted`, `adr_date_inserted`, `adr_id_inserted`, `adr_date_modified`, `adr_id_modified`, `adr_date_deleted`, `adr_id_deleted`) VALUES (@adr_type, @su_name, @adr_street, @adr_hno, @adr_zip, @adr_city, @adr_comment, @adr_deleted, @adr_date_inserted, @adr_id_inserted, @adr_date_modified, @adr_id_modified, @adr_date_deleted, @adr_id_deleted)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO `addresses` (`adr_type`, `adr_name`, `adr_street`, `adr_hno`, `adr_zip`, `adr_city`, `adr_countryCode`, `adr_comment`, `adr_deleted`, `adr_date_inserted`, `adr_us_inserted`, `adr_date_modified`, `adr_id_modified`, `adr_date_deleted`, `adr_us_deleted`) VALUES (@adr_type, @adr_name, @adr_street, @adr_hno, @adr_zip, @adr_city, @adr_countryCode, @adr_comment, @adr_deleted, @adr_date_inserted, @adr_us_inserted, @adr_date_modified, @adr_id_modified, @adr_date_deleted, @adr_us_deleted)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@adr_type";
@@ -7197,11 +7347,11 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             param.SourceColumn = "adr_type";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@su_name";
+            param.ParameterName = "@adr_name";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "su_name";
+            param.SourceColumn = "adr_name";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@adr_street";
@@ -7232,6 +7382,13 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             param.SourceColumn = "adr_city";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@adr_countryCode";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "adr_countryCode";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@adr_comment";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
@@ -7253,11 +7410,11 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             param.SourceColumn = "adr_date_inserted";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@adr_id_inserted";
+            param.ParameterName = "@adr_us_inserted";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "adr_id_inserted";
+            param.SourceColumn = "adr_us_inserted";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@adr_date_modified";
@@ -7281,36 +7438,37 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             param.SourceColumn = "adr_date_deleted";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@adr_id_deleted";
+            param.ParameterName = "@adr_us_deleted";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "adr_id_deleted";
+            param.SourceColumn = "adr_us_deleted";
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE `addresses` SET `adr_type` = @adr_type, `su_name` = @su_name, `adr_street`" +
-                " = @adr_street, `adr_hno` = @adr_hno, `adr_zip` = @adr_zip, `adr_city` = @adr_ci" +
-                "ty, `adr_comment` = @adr_comment, `adr_deleted` = @adr_deleted, `adr_date_insert" +
-                "ed` = @adr_date_inserted, `adr_id_inserted` = @adr_id_inserted, `adr_date_modifi" +
-                "ed` = @adr_date_modified, `adr_id_modified` = @adr_id_modified, `adr_date_delete" +
-                "d` = @adr_date_deleted, `adr_id_deleted` = @adr_id_deleted WHERE ((`su_id` = @Or" +
-                "iginal_su_id) AND (`adr_type` = @Original_adr_type) AND (`su_name` = @Original_s" +
-                "u_name) AND ((@IsNull_adr_street = 1 AND `adr_street` IS NULL) OR (`adr_street` " +
-                "= @Original_adr_street)) AND ((@IsNull_adr_hno = 1 AND `adr_hno` IS NULL) OR (`a" +
-                "dr_hno` = @Original_adr_hno)) AND ((@IsNull_adr_zip = 1 AND `adr_zip` IS NULL) O" +
-                "R (`adr_zip` = @Original_adr_zip)) AND ((@IsNull_adr_city = 1 AND `adr_city` IS " +
-                "NULL) OR (`adr_city` = @Original_adr_city)) AND ((@IsNull_adr_comment = 1 AND `a" +
-                "dr_comment` IS NULL) OR (`adr_comment` = @Original_adr_comment)) AND ((@IsNull_a" +
-                "dr_deleted = 1 AND `adr_deleted` IS NULL) OR (`adr_deleted` = @Original_adr_dele" +
-                "ted)) AND (`adr_date_inserted` = @Original_adr_date_inserted) AND (`adr_id_inser" +
-                "ted` = @Original_adr_id_inserted) AND ((@IsNull_adr_date_modified = 1 AND `adr_d" +
-                "ate_modified` IS NULL) OR (`adr_date_modified` = @Original_adr_date_modified)) A" +
-                "ND ((@IsNull_adr_id_modified = 1 AND `adr_id_modified` IS NULL) OR (`adr_id_modi" +
-                "fied` = @Original_adr_id_modified)) AND ((@IsNull_adr_date_deleted = 1 AND `adr_" +
-                "date_deleted` IS NULL) OR (`adr_date_deleted` = @Original_adr_date_deleted)) AND" +
-                " ((@IsNull_adr_id_deleted = 1 AND `adr_id_deleted` IS NULL) OR (`adr_id_deleted`" +
-                " = @Original_adr_id_deleted)))";
+            this._adapter.UpdateCommand.CommandText = "UPDATE `addresses` SET `adr_type` = @adr_type, `adr_name` = @adr_name, `adr_stree" +
+                "t` = @adr_street, `adr_hno` = @adr_hno, `adr_zip` = @adr_zip, `adr_city` = @adr_" +
+                "city, `adr_countryCode` = @adr_countryCode, `adr_comment` = @adr_comment, `adr_d" +
+                "eleted` = @adr_deleted, `adr_date_inserted` = @adr_date_inserted, `adr_us_insert" +
+                "ed` = @adr_us_inserted, `adr_date_modified` = @adr_date_modified, `adr_id_modifi" +
+                "ed` = @adr_id_modified, `adr_date_deleted` = @adr_date_deleted, `adr_us_deleted`" +
+                " = @adr_us_deleted WHERE ((`adr_id` = @Original_adr_id) AND (`adr_type` = @Origi" +
+                "nal_adr_type) AND (`adr_name` = @Original_adr_name) AND ((@IsNull_adr_street = 1" +
+                " AND `adr_street` IS NULL) OR (`adr_street` = @Original_adr_street)) AND ((@IsNu" +
+                "ll_adr_hno = 1 AND `adr_hno` IS NULL) OR (`adr_hno` = @Original_adr_hno)) AND ((" +
+                "@IsNull_adr_zip = 1 AND `adr_zip` IS NULL) OR (`adr_zip` = @Original_adr_zip)) A" +
+                "ND ((@IsNull_adr_city = 1 AND `adr_city` IS NULL) OR (`adr_city` = @Original_adr" +
+                "_city)) AND (`adr_countryCode` = @Original_adr_countryCode) AND ((@IsNull_adr_co" +
+                "mment = 1 AND `adr_comment` IS NULL) OR (`adr_comment` = @Original_adr_comment))" +
+                " AND ((@IsNull_adr_deleted = 1 AND `adr_deleted` IS NULL) OR (`adr_deleted` = @O" +
+                "riginal_adr_deleted)) AND (`adr_date_inserted` = @Original_adr_date_inserted) AN" +
+                "D (`adr_us_inserted` = @Original_adr_us_inserted) AND ((@IsNull_adr_date_modifie" +
+                "d = 1 AND `adr_date_modified` IS NULL) OR (`adr_date_modified` = @Original_adr_d" +
+                "ate_modified)) AND ((@IsNull_adr_id_modified = 1 AND `adr_id_modified` IS NULL) " +
+                "OR (`adr_id_modified` = @Original_adr_id_modified)) AND ((@IsNull_adr_date_delet" +
+                "ed = 1 AND `adr_date_deleted` IS NULL) OR (`adr_date_deleted` = @Original_adr_da" +
+                "te_deleted)) AND ((@IsNull_adr_us_deleted = 1 AND `adr_us_deleted` IS NULL) OR (" +
+                "`adr_us_deleted` = @Original_adr_us_deleted)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@adr_type";
@@ -7320,11 +7478,11 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             param.SourceColumn = "adr_type";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@su_name";
+            param.ParameterName = "@adr_name";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "su_name";
+            param.SourceColumn = "adr_name";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@adr_street";
@@ -7355,6 +7513,13 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             param.SourceColumn = "adr_city";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@adr_countryCode";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "adr_countryCode";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@adr_comment";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
@@ -7376,11 +7541,11 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             param.SourceColumn = "adr_date_inserted";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@adr_id_inserted";
+            param.ParameterName = "@adr_us_inserted";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "adr_id_inserted";
+            param.SourceColumn = "adr_us_inserted";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@adr_date_modified";
@@ -7404,18 +7569,18 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             param.SourceColumn = "adr_date_deleted";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@adr_id_deleted";
+            param.ParameterName = "@adr_us_deleted";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "adr_id_deleted";
+            param.SourceColumn = "adr_us_deleted";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Original_su_id";
+            param.ParameterName = "@Original_adr_id";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "su_id";
+            param.SourceColumn = "adr_id";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -7427,11 +7592,11 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Original_su_name";
+            param.ParameterName = "@Original_adr_name";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "su_name";
+            param.SourceColumn = "adr_name";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -7503,6 +7668,14 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Original_adr_countryCode";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "adr_countryCode";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@IsNull_adr_comment";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
@@ -7545,11 +7718,11 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Original_adr_id_inserted";
+            param.ParameterName = "@Original_adr_us_inserted";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "adr_id_inserted";
+            param.SourceColumn = "adr_us_inserted";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -7604,20 +7777,20 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@IsNull_adr_id_deleted";
+            param.ParameterName = "@IsNull_adr_us_deleted";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "adr_id_deleted";
+            param.SourceColumn = "adr_us_deleted";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             param.SourceColumnNullMapping = true;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Original_adr_id_deleted";
+            param.ParameterName = "@Original_adr_us_deleted";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "adr_id_deleted";
+            param.SourceColumn = "adr_us_deleted";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
         }
@@ -7635,10 +7808,7 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `su_id`, `adr_type`, `su_name`, `adr_street`, `adr_hno`, `adr_zip`, `adr_c" +
-                "ity`, `adr_comment`, `adr_deleted`, `adr_date_inserted`, `adr_id_inserted`, `adr" +
-                "_date_modified`, `adr_id_modified`, `adr_date_deleted`, `adr_id_deleted` FROM `a" +
-                "ddresses`";
+            this._commandCollection[0].CommandText = @"SELECT `adr_id`, `adr_type`, `adr_name`, `adr_street`, `adr_hno`, `adr_zip`, `adr_city`, `adr_countryCode`, `adr_comment`, `adr_deleted`, `adr_date_inserted`, `adr_us_inserted`, `adr_date_modified`, `adr_id_modified`, `adr_date_deleted`, `adr_us_deleted` FROM `addresses`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -7699,14 +7869,30 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_su_id, int Original_adr_type, string Original_su_name, string Original_adr_street, string Original_adr_hno, global::System.Nullable<int> Original_adr_zip, string Original_adr_city, string Original_adr_comment, global::System.Nullable<int> Original_adr_deleted, System.DateTime Original_adr_date_inserted, int Original_adr_id_inserted, global::System.Nullable<global::System.DateTime> Original_adr_date_modified, global::System.Nullable<int> Original_adr_id_modified, global::System.Nullable<global::System.DateTime> Original_adr_date_deleted, global::System.Nullable<int> Original_adr_id_deleted) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_su_id));
+        public virtual int Delete(
+                    int Original_adr_id, 
+                    int Original_adr_type, 
+                    string Original_adr_name, 
+                    string Original_adr_street, 
+                    string Original_adr_hno, 
+                    global::System.Nullable<int> Original_adr_zip, 
+                    string Original_adr_city, 
+                    string Original_adr_countryCode, 
+                    string Original_adr_comment, 
+                    global::System.Nullable<int> Original_adr_deleted, 
+                    System.DateTime Original_adr_date_inserted, 
+                    int Original_adr_us_inserted, 
+                    global::System.Nullable<global::System.DateTime> Original_adr_date_modified, 
+                    global::System.Nullable<int> Original_adr_id_modified, 
+                    global::System.Nullable<global::System.DateTime> Original_adr_date_deleted, 
+                    global::System.Nullable<int> Original_adr_us_deleted) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_adr_id));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_adr_type));
-            if ((Original_su_name == null)) {
-                throw new global::System.ArgumentNullException("Original_su_name");
+            if ((Original_adr_name == null)) {
+                throw new global::System.ArgumentNullException("Original_adr_name");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_su_name));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_adr_name));
             }
             if ((Original_adr_street == null)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
@@ -7740,55 +7926,61 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_adr_city));
             }
-            if ((Original_adr_comment == null)) {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            if ((Original_adr_countryCode == null)) {
+                throw new global::System.ArgumentNullException("Original_adr_countryCode");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_adr_comment));
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((string)(Original_adr_countryCode));
+            }
+            if ((Original_adr_comment == null)) {
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((string)(Original_adr_comment));
             }
             if ((Original_adr_deleted.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((int)(Original_adr_deleted.Value));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((int)(Original_adr_deleted.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
-            this.Adapter.DeleteCommand.Parameters[15].Value = ((System.DateTime)(Original_adr_date_inserted));
-            this.Adapter.DeleteCommand.Parameters[16].Value = ((int)(Original_adr_id_inserted));
+            this.Adapter.DeleteCommand.Parameters[16].Value = ((System.DateTime)(Original_adr_date_inserted));
+            this.Adapter.DeleteCommand.Parameters[17].Value = ((int)(Original_adr_us_inserted));
             if ((Original_adr_date_modified.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((System.DateTime)(Original_adr_date_modified.Value));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((System.DateTime)(Original_adr_date_modified.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             if ((Original_adr_id_modified.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((int)(Original_adr_id_modified.Value));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((int)(Original_adr_id_modified.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[21].Value = global::System.DBNull.Value;
             }
             if ((Original_adr_date_deleted.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[22].Value = ((System.DateTime)(Original_adr_date_deleted.Value));
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[23].Value = ((System.DateTime)(Original_adr_date_deleted.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
-            if ((Original_adr_id_deleted.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[24].Value = ((int)(Original_adr_id_deleted.Value));
+            if ((Original_adr_us_deleted.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((int)(Original_adr_us_deleted.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[24].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -7810,13 +8002,13 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int adr_type, string su_name, string adr_street, string adr_hno, global::System.Nullable<int> adr_zip, string adr_city, string adr_comment, global::System.Nullable<int> adr_deleted, System.DateTime adr_date_inserted, int adr_id_inserted, global::System.Nullable<global::System.DateTime> adr_date_modified, global::System.Nullable<int> adr_id_modified, global::System.Nullable<global::System.DateTime> adr_date_deleted, global::System.Nullable<int> adr_id_deleted) {
+        public virtual int Insert(int adr_type, string adr_name, string adr_street, string adr_hno, global::System.Nullable<int> adr_zip, string adr_city, string adr_countryCode, string adr_comment, global::System.Nullable<int> adr_deleted, System.DateTime adr_date_inserted, int adr_us_inserted, global::System.Nullable<global::System.DateTime> adr_date_modified, global::System.Nullable<int> adr_id_modified, global::System.Nullable<global::System.DateTime> adr_date_deleted, global::System.Nullable<int> adr_us_deleted) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(adr_type));
-            if ((su_name == null)) {
-                throw new global::System.ArgumentNullException("su_name");
+            if ((adr_name == null)) {
+                throw new global::System.ArgumentNullException("adr_name");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(su_name));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(adr_name));
             }
             if ((adr_street == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -7842,43 +8034,49 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = ((string)(adr_city));
             }
+            if ((adr_countryCode == null)) {
+                throw new global::System.ArgumentNullException("adr_countryCode");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(adr_countryCode));
+            }
             if ((adr_comment == null)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(adr_comment));
-            }
-            if ((adr_deleted.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((int)(adr_deleted.Value));
-            }
-            else {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            this.Adapter.InsertCommand.Parameters[8].Value = ((System.DateTime)(adr_date_inserted));
-            this.Adapter.InsertCommand.Parameters[9].Value = ((int)(adr_id_inserted));
-            if ((adr_date_modified.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((System.DateTime)(adr_date_modified.Value));
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(adr_comment));
+            }
+            if ((adr_deleted.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((int)(adr_deleted.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((adr_id_modified.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((int)(adr_id_modified.Value));
+            this.Adapter.InsertCommand.Parameters[9].Value = ((System.DateTime)(adr_date_inserted));
+            this.Adapter.InsertCommand.Parameters[10].Value = ((int)(adr_us_inserted));
+            if ((adr_date_modified.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((System.DateTime)(adr_date_modified.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((adr_date_deleted.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((System.DateTime)(adr_date_deleted.Value));
+            if ((adr_id_modified.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((int)(adr_id_modified.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            if ((adr_id_deleted.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[13].Value = ((int)(adr_id_deleted.Value));
+            if ((adr_date_deleted.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[13].Value = ((System.DateTime)(adr_date_deleted.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((adr_us_deleted.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[14].Value = ((int)(adr_us_deleted.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -7902,40 +8100,42 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
                     int adr_type, 
-                    string su_name, 
+                    string adr_name, 
                     string adr_street, 
                     string adr_hno, 
                     global::System.Nullable<int> adr_zip, 
                     string adr_city, 
+                    string adr_countryCode, 
                     string adr_comment, 
                     global::System.Nullable<int> adr_deleted, 
                     System.DateTime adr_date_inserted, 
-                    int adr_id_inserted, 
+                    int adr_us_inserted, 
                     global::System.Nullable<global::System.DateTime> adr_date_modified, 
                     global::System.Nullable<int> adr_id_modified, 
                     global::System.Nullable<global::System.DateTime> adr_date_deleted, 
-                    global::System.Nullable<int> adr_id_deleted, 
-                    int Original_su_id, 
+                    global::System.Nullable<int> adr_us_deleted, 
+                    int Original_adr_id, 
                     int Original_adr_type, 
-                    string Original_su_name, 
+                    string Original_adr_name, 
                     string Original_adr_street, 
                     string Original_adr_hno, 
                     global::System.Nullable<int> Original_adr_zip, 
                     string Original_adr_city, 
+                    string Original_adr_countryCode, 
                     string Original_adr_comment, 
                     global::System.Nullable<int> Original_adr_deleted, 
                     System.DateTime Original_adr_date_inserted, 
-                    int Original_adr_id_inserted, 
+                    int Original_adr_us_inserted, 
                     global::System.Nullable<global::System.DateTime> Original_adr_date_modified, 
                     global::System.Nullable<int> Original_adr_id_modified, 
                     global::System.Nullable<global::System.DateTime> Original_adr_date_deleted, 
-                    global::System.Nullable<int> Original_adr_id_deleted) {
+                    global::System.Nullable<int> Original_adr_us_deleted) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(adr_type));
-            if ((su_name == null)) {
-                throw new global::System.ArgumentNullException("su_name");
+            if ((adr_name == null)) {
+                throw new global::System.ArgumentNullException("adr_name");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(su_name));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(adr_name));
             }
             if ((adr_street == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -7961,133 +8161,145 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(adr_city));
             }
+            if ((adr_countryCode == null)) {
+                throw new global::System.ArgumentNullException("adr_countryCode");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(adr_countryCode));
+            }
             if ((adr_comment == null)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(adr_comment));
-            }
-            if ((adr_deleted.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(adr_deleted.Value));
-            }
-            else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(adr_date_inserted));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(adr_id_inserted));
-            if ((adr_date_modified.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((System.DateTime)(adr_date_modified.Value));
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(adr_comment));
+            }
+            if ((adr_deleted.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(adr_deleted.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((adr_id_modified.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(adr_id_modified.Value));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(adr_date_inserted));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(adr_us_inserted));
+            if ((adr_date_modified.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((System.DateTime)(adr_date_modified.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((adr_date_deleted.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(adr_date_deleted.Value));
+            if ((adr_id_modified.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(adr_id_modified.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            if ((adr_id_deleted.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(adr_id_deleted.Value));
+            if ((adr_date_deleted.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((System.DateTime)(adr_date_deleted.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_su_id));
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_adr_type));
-            if ((Original_su_name == null)) {
-                throw new global::System.ArgumentNullException("Original_su_name");
+            if ((adr_us_deleted.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(adr_us_deleted.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_su_name));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_adr_id));
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_adr_type));
+            if ((Original_adr_name == null)) {
+                throw new global::System.ArgumentNullException("Original_adr_name");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_adr_name));
             }
             if ((Original_adr_street == null)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_adr_street));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_adr_street));
             }
             if ((Original_adr_hno == null)) {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_adr_hno));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_adr_hno));
             }
             if ((Original_adr_zip.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(Original_adr_zip.Value));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((int)(Original_adr_zip.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
             if ((Original_adr_city == null)) {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_adr_city));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_adr_city));
+            }
+            if ((Original_adr_countryCode == null)) {
+                throw new global::System.ArgumentNullException("Original_adr_countryCode");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_adr_countryCode));
             }
             if ((Original_adr_comment == null)) {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_adr_comment));
-            }
-            if ((Original_adr_deleted.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(Original_adr_deleted.Value));
-            }
-            else {
                 this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[29].Value = ((System.DateTime)(Original_adr_date_inserted));
-            this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(Original_adr_id_inserted));
-            if ((Original_adr_date_modified.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((System.DateTime)(Original_adr_date_modified.Value));
+            else {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_adr_comment));
+            }
+            if ((Original_adr_deleted.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(Original_adr_deleted.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
             }
-            if ((Original_adr_id_modified.HasValue == true)) {
+            this.Adapter.UpdateCommand.Parameters[31].Value = ((System.DateTime)(Original_adr_date_inserted));
+            this.Adapter.UpdateCommand.Parameters[32].Value = ((int)(Original_adr_us_inserted));
+            if ((Original_adr_date_modified.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((int)(Original_adr_id_modified.Value));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((System.DateTime)(Original_adr_date_modified.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
             }
-            if ((Original_adr_date_deleted.HasValue == true)) {
+            if ((Original_adr_id_modified.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((System.DateTime)(Original_adr_date_deleted.Value));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((int)(Original_adr_id_modified.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
             }
-            if ((Original_adr_id_deleted.HasValue == true)) {
+            if ((Original_adr_date_deleted.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((int)(Original_adr_id_deleted.Value));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((System.DateTime)(Original_adr_date_deleted.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
+            }
+            if ((Original_adr_us_deleted.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((int)(Original_adr_us_deleted.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -8236,6 +8448,7 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("pe_hno", "pe_hno");
             tableMapping.ColumnMappings.Add("pe_zip", "pe_zip");
             tableMapping.ColumnMappings.Add("pe_city", "pe_city");
+            tableMapping.ColumnMappings.Add("pe_countryCode", "pe_countryCode");
             tableMapping.ColumnMappings.Add("pe_deleted", "pe_deleted");
             tableMapping.ColumnMappings.Add("pe_date_inserted", "pe_date_inserted");
             tableMapping.ColumnMappings.Add("pe_us_inserted", "pe_us_inserted");
@@ -8246,7 +8459,7 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `persons` WHERE ((`pe_id` = @Original_pe_id) AND (`pe_type` = @Original_pe_type) AND ((@IsNull_pe_adr_id = 1 AND `pe_adr_id` IS NULL) OR (`pe_adr_id` = @Original_pe_adr_id)) AND (`pe_name` = @Original_pe_name) AND ((@IsNull_pe_firstname = 1 AND `pe_firstname` IS NULL) OR (`pe_firstname` = @Original_pe_firstname)) AND ((@IsNull_pe_street = 1 AND `pe_street` IS NULL) OR (`pe_street` = @Original_pe_street)) AND ((@IsNull_pe_hno = 1 AND `pe_hno` IS NULL) OR (`pe_hno` = @Original_pe_hno)) AND ((@IsNull_pe_zip = 1 AND `pe_zip` IS NULL) OR (`pe_zip` = @Original_pe_zip)) AND ((@IsNull_pe_city = 1 AND `pe_city` IS NULL) OR (`pe_city` = @Original_pe_city)) AND ((@IsNull_pe_deleted = 1 AND `pe_deleted` IS NULL) OR (`pe_deleted` = @Original_pe_deleted)) AND (`pe_date_inserted` = @Original_pe_date_inserted) AND (`pe_us_inserted` = @Original_pe_us_inserted) AND ((@IsNull_pe_date_modified = 1 AND `pe_date_modified` IS NULL) OR (`pe_date_modified` = @Original_pe_date_modified)) AND ((@IsNull_pe_us_modified = 1 AND `pe_us_modified` IS NULL) OR (`pe_us_modified` = @Original_pe_us_modified)) AND ((@IsNull_pe_date_deleted = 1 AND `pe_date_deleted` IS NULL) OR (`pe_date_deleted` = @Original_pe_date_deleted)) AND ((@IsNull_pe_us_deleted = 1 AND `pe_us_deleted` IS NULL) OR (`pe_us_deleted` = @Original_pe_us_deleted)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `persons` WHERE ((`pe_id` = @Original_pe_id) AND (`pe_type` = @Original_pe_type) AND ((@IsNull_pe_adr_id = 1 AND `pe_adr_id` IS NULL) OR (`pe_adr_id` = @Original_pe_adr_id)) AND (`pe_name` = @Original_pe_name) AND ((@IsNull_pe_firstname = 1 AND `pe_firstname` IS NULL) OR (`pe_firstname` = @Original_pe_firstname)) AND ((@IsNull_pe_street = 1 AND `pe_street` IS NULL) OR (`pe_street` = @Original_pe_street)) AND ((@IsNull_pe_hno = 1 AND `pe_hno` IS NULL) OR (`pe_hno` = @Original_pe_hno)) AND ((@IsNull_pe_zip = 1 AND `pe_zip` IS NULL) OR (`pe_zip` = @Original_pe_zip)) AND ((@IsNull_pe_city = 1 AND `pe_city` IS NULL) OR (`pe_city` = @Original_pe_city)) AND (`pe_countryCode` = @Original_pe_countryCode) AND ((@IsNull_pe_deleted = 1 AND `pe_deleted` IS NULL) OR (`pe_deleted` = @Original_pe_deleted)) AND (`pe_date_inserted` = @Original_pe_date_inserted) AND (`pe_us_inserted` = @Original_pe_us_inserted) AND ((@IsNull_pe_date_modified = 1 AND `pe_date_modified` IS NULL) OR (`pe_date_modified` = @Original_pe_date_modified)) AND ((@IsNull_pe_us_modified = 1 AND `pe_us_modified` IS NULL) OR (`pe_us_modified` = @Original_pe_us_modified)) AND ((@IsNull_pe_date_deleted = 1 AND `pe_date_deleted` IS NULL) OR (`pe_date_deleted` = @Original_pe_date_deleted)) AND ((@IsNull_pe_us_deleted = 1 AND `pe_us_deleted` IS NULL) OR (`pe_us_deleted` = @Original_pe_us_deleted)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_pe_id";
@@ -8375,6 +8588,14 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Original_pe_countryCode";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "pe_countryCode";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@IsNull_pe_deleted";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
@@ -8477,7 +8698,7 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO `persons` (`pe_type`, `pe_adr_id`, `pe_name`, `pe_firstname`, `pe_street`, `pe_hno`, `pe_zip`, `pe_city`, `pe_deleted`, `pe_date_inserted`, `pe_us_inserted`, `pe_date_modified`, `pe_us_modified`, `pe_date_deleted`, `pe_us_deleted`) VALUES (@pe_type, @pe_adr_id, @pe_name, @pe_firstname, @pe_street, @pe_hno, @pe_zip, @pe_city, @pe_deleted, @pe_date_inserted, @pe_us_inserted, @pe_date_modified, @pe_us_modified, @pe_date_deleted, @pe_us_deleted)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO `persons` (`pe_type`, `pe_adr_id`, `pe_name`, `pe_firstname`, `pe_street`, `pe_hno`, `pe_zip`, `pe_city`, `pe_countryCode`, `pe_deleted`, `pe_date_inserted`, `pe_us_inserted`, `pe_date_modified`, `pe_us_modified`, `pe_date_deleted`, `pe_us_deleted`) VALUES (@pe_type, @pe_adr_id, @pe_name, @pe_firstname, @pe_street, @pe_hno, @pe_zip, @pe_city, @pe_countryCode, @pe_deleted, @pe_date_inserted, @pe_us_inserted, @pe_date_modified, @pe_us_modified, @pe_date_deleted, @pe_us_deleted)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@pe_type";
@@ -8536,6 +8757,13 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             param.SourceColumn = "pe_city";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@pe_countryCode";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "pe_countryCode";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@pe_deleted";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
@@ -8588,27 +8816,28 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE `persons` SET `pe_type` = @pe_type, `pe_adr_id` = @pe_adr_id, `pe_name` = " +
                 "@pe_name, `pe_firstname` = @pe_firstname, `pe_street` = @pe_street, `pe_hno` = @" +
-                "pe_hno, `pe_zip` = @pe_zip, `pe_city` = @pe_city, `pe_deleted` = @pe_deleted, `p" +
-                "e_date_inserted` = @pe_date_inserted, `pe_us_inserted` = @pe_us_inserted, `pe_da" +
-                "te_modified` = @pe_date_modified, `pe_us_modified` = @pe_us_modified, `pe_date_d" +
-                "eleted` = @pe_date_deleted, `pe_us_deleted` = @pe_us_deleted WHERE ((`pe_id` = @" +
-                "Original_pe_id) AND (`pe_type` = @Original_pe_type) AND ((@IsNull_pe_adr_id = 1 " +
-                "AND `pe_adr_id` IS NULL) OR (`pe_adr_id` = @Original_pe_adr_id)) AND (`pe_name` " +
-                "= @Original_pe_name) AND ((@IsNull_pe_firstname = 1 AND `pe_firstname` IS NULL) " +
-                "OR (`pe_firstname` = @Original_pe_firstname)) AND ((@IsNull_pe_street = 1 AND `p" +
-                "e_street` IS NULL) OR (`pe_street` = @Original_pe_street)) AND ((@IsNull_pe_hno " +
-                "= 1 AND `pe_hno` IS NULL) OR (`pe_hno` = @Original_pe_hno)) AND ((@IsNull_pe_zip" +
-                " = 1 AND `pe_zip` IS NULL) OR (`pe_zip` = @Original_pe_zip)) AND ((@IsNull_pe_ci" +
-                "ty = 1 AND `pe_city` IS NULL) OR (`pe_city` = @Original_pe_city)) AND ((@IsNull_" +
-                "pe_deleted = 1 AND `pe_deleted` IS NULL) OR (`pe_deleted` = @Original_pe_deleted" +
-                ")) AND (`pe_date_inserted` = @Original_pe_date_inserted) AND (`pe_us_inserted` =" +
-                " @Original_pe_us_inserted) AND ((@IsNull_pe_date_modified = 1 AND `pe_date_modif" +
-                "ied` IS NULL) OR (`pe_date_modified` = @Original_pe_date_modified)) AND ((@IsNul" +
-                "l_pe_us_modified = 1 AND `pe_us_modified` IS NULL) OR (`pe_us_modified` = @Origi" +
-                "nal_pe_us_modified)) AND ((@IsNull_pe_date_deleted = 1 AND `pe_date_deleted` IS " +
-                "NULL) OR (`pe_date_deleted` = @Original_pe_date_deleted)) AND ((@IsNull_pe_us_de" +
-                "leted = 1 AND `pe_us_deleted` IS NULL) OR (`pe_us_deleted` = @Original_pe_us_del" +
-                "eted)))";
+                "pe_hno, `pe_zip` = @pe_zip, `pe_city` = @pe_city, `pe_countryCode` = @pe_country" +
+                "Code, `pe_deleted` = @pe_deleted, `pe_date_inserted` = @pe_date_inserted, `pe_us" +
+                "_inserted` = @pe_us_inserted, `pe_date_modified` = @pe_date_modified, `pe_us_mod" +
+                "ified` = @pe_us_modified, `pe_date_deleted` = @pe_date_deleted, `pe_us_deleted` " +
+                "= @pe_us_deleted WHERE ((`pe_id` = @Original_pe_id) AND (`pe_type` = @Original_p" +
+                "e_type) AND ((@IsNull_pe_adr_id = 1 AND `pe_adr_id` IS NULL) OR (`pe_adr_id` = @" +
+                "Original_pe_adr_id)) AND (`pe_name` = @Original_pe_name) AND ((@IsNull_pe_firstn" +
+                "ame = 1 AND `pe_firstname` IS NULL) OR (`pe_firstname` = @Original_pe_firstname)" +
+                ") AND ((@IsNull_pe_street = 1 AND `pe_street` IS NULL) OR (`pe_street` = @Origin" +
+                "al_pe_street)) AND ((@IsNull_pe_hno = 1 AND `pe_hno` IS NULL) OR (`pe_hno` = @Or" +
+                "iginal_pe_hno)) AND ((@IsNull_pe_zip = 1 AND `pe_zip` IS NULL) OR (`pe_zip` = @O" +
+                "riginal_pe_zip)) AND ((@IsNull_pe_city = 1 AND `pe_city` IS NULL) OR (`pe_city` " +
+                "= @Original_pe_city)) AND (`pe_countryCode` = @Original_pe_countryCode) AND ((@I" +
+                "sNull_pe_deleted = 1 AND `pe_deleted` IS NULL) OR (`pe_deleted` = @Original_pe_d" +
+                "eleted)) AND (`pe_date_inserted` = @Original_pe_date_inserted) AND (`pe_us_inser" +
+                "ted` = @Original_pe_us_inserted) AND ((@IsNull_pe_date_modified = 1 AND `pe_date" +
+                "_modified` IS NULL) OR (`pe_date_modified` = @Original_pe_date_modified)) AND ((" +
+                "@IsNull_pe_us_modified = 1 AND `pe_us_modified` IS NULL) OR (`pe_us_modified` = " +
+                "@Original_pe_us_modified)) AND ((@IsNull_pe_date_deleted = 1 AND `pe_date_delete" +
+                "d` IS NULL) OR (`pe_date_deleted` = @Original_pe_date_deleted)) AND ((@IsNull_pe" +
+                "_us_deleted = 1 AND `pe_us_deleted` IS NULL) OR (`pe_us_deleted` = @Original_pe_" +
+                "us_deleted)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@pe_type";
@@ -8665,6 +8894,13 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
             param.SourceColumn = "pe_city";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@pe_countryCode";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "pe_countryCode";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@pe_deleted";
@@ -8842,6 +9078,14 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Original_pe_countryCode";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "pe_countryCode";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@IsNull_pe_deleted";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
@@ -8957,10 +9201,7 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `pe_id`, `pe_type`, `pe_adr_id`, `pe_name`, `pe_firstname`, `pe_street`, `" +
-                "pe_hno`, `pe_zip`, `pe_city`, `pe_deleted`, `pe_date_inserted`, `pe_us_inserted`" +
-                ", `pe_date_modified`, `pe_us_modified`, `pe_date_deleted`, `pe_us_deleted` FROM " +
-                "`persons`";
+            this._commandCollection[0].CommandText = @"SELECT `pe_id`, `pe_type`, `pe_adr_id`, `pe_name`, `pe_firstname`, `pe_street`, `pe_hno`, `pe_zip`, `pe_city`, `pe_countryCode`, `pe_deleted`, `pe_date_inserted`, `pe_us_inserted`, `pe_date_modified`, `pe_us_modified`, `pe_date_deleted`, `pe_us_deleted` FROM `persons`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -9031,6 +9272,7 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
                     string Original_pe_hno, 
                     global::System.Nullable<int> Original_pe_zip, 
                     string Original_pe_city, 
+                    string Original_pe_countryCode, 
                     global::System.Nullable<int> Original_pe_deleted, 
                     System.DateTime Original_pe_date_inserted, 
                     int Original_pe_us_inserted, 
@@ -9094,47 +9336,53 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_pe_city));
             }
+            if ((Original_pe_countryCode == null)) {
+                throw new global::System.ArgumentNullException("Original_pe_countryCode");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((string)(Original_pe_countryCode));
+            }
             if ((Original_pe_deleted.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((int)(Original_pe_deleted.Value));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((int)(Original_pe_deleted.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
-            this.Adapter.DeleteCommand.Parameters[17].Value = ((System.DateTime)(Original_pe_date_inserted));
-            this.Adapter.DeleteCommand.Parameters[18].Value = ((int)(Original_pe_us_inserted));
+            this.Adapter.DeleteCommand.Parameters[18].Value = ((System.DateTime)(Original_pe_date_inserted));
+            this.Adapter.DeleteCommand.Parameters[19].Value = ((int)(Original_pe_us_inserted));
             if ((Original_pe_date_modified.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((System.DateTime)(Original_pe_date_modified.Value));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((System.DateTime)(Original_pe_date_modified.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[21].Value = global::System.DBNull.Value;
             }
             if ((Original_pe_us_modified.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[22].Value = ((int)(Original_pe_us_modified.Value));
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[23].Value = ((int)(Original_pe_us_modified.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
             if ((Original_pe_date_deleted.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[24].Value = ((System.DateTime)(Original_pe_date_deleted.Value));
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((System.DateTime)(Original_pe_date_deleted.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[24].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
             if ((Original_pe_us_deleted.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[26].Value = ((int)(Original_pe_us_deleted.Value));
+                this.Adapter.DeleteCommand.Parameters[26].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[27].Value = ((int)(Original_pe_us_deleted.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[26].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[26].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[27].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -9156,7 +9404,23 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int pe_type, global::System.Nullable<int> pe_adr_id, string pe_name, string pe_firstname, string pe_street, string pe_hno, global::System.Nullable<int> pe_zip, string pe_city, global::System.Nullable<int> pe_deleted, System.DateTime pe_date_inserted, int pe_us_inserted, global::System.Nullable<global::System.DateTime> pe_date_modified, global::System.Nullable<int> pe_us_modified, global::System.Nullable<global::System.DateTime> pe_date_deleted, global::System.Nullable<int> pe_us_deleted) {
+        public virtual int Insert(
+                    int pe_type, 
+                    global::System.Nullable<int> pe_adr_id, 
+                    string pe_name, 
+                    string pe_firstname, 
+                    string pe_street, 
+                    string pe_hno, 
+                    global::System.Nullable<int> pe_zip, 
+                    string pe_city, 
+                    string pe_countryCode, 
+                    global::System.Nullable<int> pe_deleted, 
+                    System.DateTime pe_date_inserted, 
+                    int pe_us_inserted, 
+                    global::System.Nullable<global::System.DateTime> pe_date_modified, 
+                    global::System.Nullable<int> pe_us_modified, 
+                    global::System.Nullable<global::System.DateTime> pe_date_deleted, 
+                    global::System.Nullable<int> pe_us_deleted) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(pe_type));
             if ((pe_adr_id.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((int)(pe_adr_id.Value));
@@ -9200,37 +9464,43 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = ((string)(pe_city));
             }
+            if ((pe_countryCode == null)) {
+                throw new global::System.ArgumentNullException("pe_countryCode");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(pe_countryCode));
+            }
             if ((pe_deleted.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((int)(pe_deleted.Value));
+                this.Adapter.InsertCommand.Parameters[9].Value = ((int)(pe_deleted.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            this.Adapter.InsertCommand.Parameters[9].Value = ((System.DateTime)(pe_date_inserted));
-            this.Adapter.InsertCommand.Parameters[10].Value = ((int)(pe_us_inserted));
+            this.Adapter.InsertCommand.Parameters[10].Value = ((System.DateTime)(pe_date_inserted));
+            this.Adapter.InsertCommand.Parameters[11].Value = ((int)(pe_us_inserted));
             if ((pe_date_modified.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((System.DateTime)(pe_date_modified.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            if ((pe_us_modified.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((int)(pe_us_modified.Value));
+                this.Adapter.InsertCommand.Parameters[12].Value = ((System.DateTime)(pe_date_modified.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            if ((pe_date_deleted.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[13].Value = ((System.DateTime)(pe_date_deleted.Value));
+            if ((pe_us_modified.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[13].Value = ((int)(pe_us_modified.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
-            if ((pe_us_deleted.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[14].Value = ((int)(pe_us_deleted.Value));
+            if ((pe_date_deleted.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[14].Value = ((System.DateTime)(pe_date_deleted.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            if ((pe_us_deleted.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[15].Value = ((int)(pe_us_deleted.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -9261,6 +9531,7 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
                     string pe_hno, 
                     global::System.Nullable<int> pe_zip, 
                     string pe_city, 
+                    string pe_countryCode, 
                     global::System.Nullable<int> pe_deleted, 
                     System.DateTime pe_date_inserted, 
                     int pe_us_inserted, 
@@ -9277,6 +9548,7 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
                     string Original_pe_hno, 
                     global::System.Nullable<int> Original_pe_zip, 
                     string Original_pe_city, 
+                    string Original_pe_countryCode, 
                     global::System.Nullable<int> Original_pe_deleted, 
                     System.DateTime Original_pe_date_inserted, 
                     int Original_pe_us_inserted, 
@@ -9327,135 +9599,147 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(pe_city));
             }
+            if ((pe_countryCode == null)) {
+                throw new global::System.ArgumentNullException("pe_countryCode");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(pe_countryCode));
+            }
             if ((pe_deleted.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(pe_deleted.Value));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(pe_deleted.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(pe_date_inserted));
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(pe_us_inserted));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((System.DateTime)(pe_date_inserted));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(pe_us_inserted));
             if ((pe_date_modified.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((System.DateTime)(pe_date_modified.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            if ((pe_us_modified.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(pe_us_modified.Value));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(pe_date_modified.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            if ((pe_date_deleted.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((System.DateTime)(pe_date_deleted.Value));
+            if ((pe_us_modified.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(pe_us_modified.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
-            if ((pe_us_deleted.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(pe_us_deleted.Value));
+            if ((pe_date_deleted.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((System.DateTime)(pe_date_deleted.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_pe_id));
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_pe_type));
-            if ((Original_pe_adr_id.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_pe_adr_id.Value));
+            if ((pe_us_deleted.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(pe_us_deleted.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_pe_id));
+            this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_pe_type));
+            if ((Original_pe_adr_id.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_pe_adr_id.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             if ((Original_pe_name == null)) {
                 throw new global::System.ArgumentNullException("Original_pe_name");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_pe_name));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_pe_name));
             }
             if ((Original_pe_firstname == null)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_pe_firstname));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_pe_firstname));
             }
             if ((Original_pe_street == null)) {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_pe_street));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_pe_street));
             }
             if ((Original_pe_hno == null)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_pe_hno));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_pe_hno));
             }
             if ((Original_pe_zip.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((int)(Original_pe_zip.Value));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(Original_pe_zip.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
             if ((Original_pe_city == null)) {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(Original_pe_city));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(Original_pe_city));
+            }
+            if ((Original_pe_countryCode == null)) {
+                throw new global::System.ArgumentNullException("Original_pe_countryCode");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((string)(Original_pe_countryCode));
             }
             if ((Original_pe_deleted.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((int)(Original_pe_deleted.Value));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((int)(Original_pe_deleted.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[32].Value = ((System.DateTime)(Original_pe_date_inserted));
-            this.Adapter.UpdateCommand.Parameters[33].Value = ((int)(Original_pe_us_inserted));
+            this.Adapter.UpdateCommand.Parameters[34].Value = ((System.DateTime)(Original_pe_date_inserted));
+            this.Adapter.UpdateCommand.Parameters[35].Value = ((int)(Original_pe_us_inserted));
             if ((Original_pe_date_modified.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((System.DateTime)(Original_pe_date_modified.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
-            }
-            if ((Original_pe_us_modified.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((int)(Original_pe_us_modified.Value));
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((System.DateTime)(Original_pe_date_modified.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
             }
-            if ((Original_pe_date_deleted.HasValue == true)) {
+            if ((Original_pe_us_modified.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((System.DateTime)(Original_pe_date_deleted.Value));
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((int)(Original_pe_us_modified.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
             }
-            if ((Original_pe_us_deleted.HasValue == true)) {
+            if ((Original_pe_date_deleted.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((int)(Original_pe_us_deleted.Value));
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((System.DateTime)(Original_pe_date_deleted.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[41].Value = global::System.DBNull.Value;
+            }
+            if ((Original_pe_us_deleted.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((int)(Original_pe_us_deleted.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[43].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -9612,7 +9896,7 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `phones` WHERE ((`ph_id` = @Original_ph_id) AND ((@IsNull_ph_adr_id = 1 AND `ph_adr_id` IS NULL) OR (`ph_adr_id` = @Original_ph_adr_id)) AND ((@IsNull_ph_pe_id = 1 AND `ph_pe_id` IS NULL) OR (`ph_pe_id` = @Original_ph_pe_id)) AND ((@IsNull_ph_us_id = 1 AND `ph_us_id` IS NULL) OR (`ph_us_id` = @Original_ph_us_id)) AND (`ph_phoneType` = @Original_ph_phoneType) AND (`ph_areaCode` = @Original_ph_areaCode) AND (`ph_phone` = @Original_ph_phone) AND ((@IsNull_ph_deleted = 1 AND `ph_deleted` IS NULL) OR (`ph_deleted` = @Original_ph_deleted)) AND (`ph_date_inserted` = @Original_ph_date_inserted) AND (`ph_us_inserted` = @Original_ph_us_inserted) AND ((@IsNull_ph_date_modified = 1 AND `ph_date_modified` IS NULL) OR (`ph_date_modified` = @Original_ph_date_modified)) AND ((@IsNull_ph_us_modified = 1 AND `ph_us_modified` IS NULL) OR (`ph_us_modified` = @Original_ph_us_modified)) AND ((@IsNull_ph_date_deleted = 1 AND `ph_date_deleted` IS NULL) OR (`ph_date_deleted` = @Original_ph_date_deleted)) AND ((@IsNull_ph_us_deleted = 1 AND `ph_us_deleted` IS NULL) OR (`ph_us_deleted` = @Original_ph_us_deleted)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `phones` WHERE ((`ph_id` = @Original_ph_id) AND ((@IsNull_ph_adr_id = 1 AND `ph_adr_id` IS NULL) OR (`ph_adr_id` = @Original_ph_adr_id)) AND ((@IsNull_ph_pe_id = 1 AND `ph_pe_id` IS NULL) OR (`ph_pe_id` = @Original_ph_pe_id)) AND ((@IsNull_ph_us_id = 1 AND `ph_us_id` IS NULL) OR (`ph_us_id` = @Original_ph_us_id)) AND (`ph_phoneType` = @Original_ph_phoneType) AND ((@IsNull_ph_areaCode = 1 AND `ph_areaCode` IS NULL) OR (`ph_areaCode` = @Original_ph_areaCode)) AND (`ph_phone` = @Original_ph_phone) AND ((@IsNull_ph_deleted = 1 AND `ph_deleted` IS NULL) OR (`ph_deleted` = @Original_ph_deleted)) AND (`ph_date_inserted` = @Original_ph_date_inserted) AND (`ph_us_inserted` = @Original_ph_us_inserted) AND ((@IsNull_ph_date_modified = 1 AND `ph_date_modified` IS NULL) OR (`ph_date_modified` = @Original_ph_date_modified)) AND ((@IsNull_ph_us_modified = 1 AND `ph_us_modified` IS NULL) OR (`ph_us_modified` = @Original_ph_us_modified)) AND ((@IsNull_ph_date_deleted = 1 AND `ph_date_deleted` IS NULL) OR (`ph_date_deleted` = @Original_ph_date_deleted)) AND ((@IsNull_ph_us_deleted = 1 AND `ph_us_deleted` IS NULL) OR (`ph_us_deleted` = @Original_ph_us_deleted)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_ph_id";
@@ -9682,9 +9966,18 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Original_ph_areaCode";
+            param.ParameterName = "@IsNull_ph_areaCode";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "ph_areaCode";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Original_ph_areaCode";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
             param.SourceColumn = "ph_areaCode";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -9832,8 +10125,8 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@ph_areaCode";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
             param.SourceColumn = "ph_areaCode";
             this._adapter.InsertCommand.Parameters.Add(param);
@@ -9904,17 +10197,17 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
                 "h_adr_id = 1 AND `ph_adr_id` IS NULL) OR (`ph_adr_id` = @Original_ph_adr_id)) AN" +
                 "D ((@IsNull_ph_pe_id = 1 AND `ph_pe_id` IS NULL) OR (`ph_pe_id` = @Original_ph_p" +
                 "e_id)) AND ((@IsNull_ph_us_id = 1 AND `ph_us_id` IS NULL) OR (`ph_us_id` = @Orig" +
-                "inal_ph_us_id)) AND (`ph_phoneType` = @Original_ph_phoneType) AND (`ph_areaCode`" +
-                " = @Original_ph_areaCode) AND (`ph_phone` = @Original_ph_phone) AND ((@IsNull_ph" +
-                "_deleted = 1 AND `ph_deleted` IS NULL) OR (`ph_deleted` = @Original_ph_deleted))" +
-                " AND (`ph_date_inserted` = @Original_ph_date_inserted) AND (`ph_us_inserted` = @" +
-                "Original_ph_us_inserted) AND ((@IsNull_ph_date_modified = 1 AND `ph_date_modifie" +
-                "d` IS NULL) OR (`ph_date_modified` = @Original_ph_date_modified)) AND ((@IsNull_" +
-                "ph_us_modified = 1 AND `ph_us_modified` IS NULL) OR (`ph_us_modified` = @Origina" +
-                "l_ph_us_modified)) AND ((@IsNull_ph_date_deleted = 1 AND `ph_date_deleted` IS NU" +
-                "LL) OR (`ph_date_deleted` = @Original_ph_date_deleted)) AND ((@IsNull_ph_us_dele" +
-                "ted = 1 AND `ph_us_deleted` IS NULL) OR (`ph_us_deleted` = @Original_ph_us_delet" +
-                "ed)))";
+                "inal_ph_us_id)) AND (`ph_phoneType` = @Original_ph_phoneType) AND ((@IsNull_ph_a" +
+                "reaCode = 1 AND `ph_areaCode` IS NULL) OR (`ph_areaCode` = @Original_ph_areaCode" +
+                ")) AND (`ph_phone` = @Original_ph_phone) AND ((@IsNull_ph_deleted = 1 AND `ph_de" +
+                "leted` IS NULL) OR (`ph_deleted` = @Original_ph_deleted)) AND (`ph_date_inserted" +
+                "` = @Original_ph_date_inserted) AND (`ph_us_inserted` = @Original_ph_us_inserted" +
+                ") AND ((@IsNull_ph_date_modified = 1 AND `ph_date_modified` IS NULL) OR (`ph_dat" +
+                "e_modified` = @Original_ph_date_modified)) AND ((@IsNull_ph_us_modified = 1 AND " +
+                "`ph_us_modified` IS NULL) OR (`ph_us_modified` = @Original_ph_us_modified)) AND " +
+                "((@IsNull_ph_date_deleted = 1 AND `ph_date_deleted` IS NULL) OR (`ph_date_delete" +
+                "d` = @Original_ph_date_deleted)) AND ((@IsNull_ph_us_deleted = 1 AND `ph_us_dele" +
+                "ted` IS NULL) OR (`ph_us_deleted` = @Original_ph_us_deleted)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@ph_adr_id";
@@ -9946,8 +10239,8 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@ph_areaCode";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
             param.SourceColumn = "ph_areaCode";
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -10075,9 +10368,18 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Original_ph_areaCode";
+            param.ParameterName = "@IsNull_ph_areaCode";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "ph_areaCode";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Original_ph_areaCode";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
             param.SourceColumn = "ph_areaCode";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -10269,7 +10571,7 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ph_id, global::System.Nullable<int> Original_ph_adr_id, global::System.Nullable<int> Original_ph_pe_id, global::System.Nullable<int> Original_ph_us_id, int Original_ph_phoneType, int Original_ph_areaCode, int Original_ph_phone, global::System.Nullable<int> Original_ph_deleted, System.DateTime Original_ph_date_inserted, int Original_ph_us_inserted, global::System.Nullable<global::System.DateTime> Original_ph_date_modified, global::System.Nullable<int> Original_ph_us_modified, global::System.Nullable<global::System.DateTime> Original_ph_date_deleted, global::System.Nullable<int> Original_ph_us_deleted) {
+        public virtual int Delete(int Original_ph_id, global::System.Nullable<int> Original_ph_adr_id, global::System.Nullable<int> Original_ph_pe_id, global::System.Nullable<int> Original_ph_us_id, int Original_ph_phoneType, string Original_ph_areaCode, int Original_ph_phone, global::System.Nullable<int> Original_ph_deleted, System.DateTime Original_ph_date_inserted, int Original_ph_us_inserted, global::System.Nullable<global::System.DateTime> Original_ph_date_modified, global::System.Nullable<int> Original_ph_us_modified, global::System.Nullable<global::System.DateTime> Original_ph_date_deleted, global::System.Nullable<int> Original_ph_us_deleted) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ph_id));
             if ((Original_ph_adr_id.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
@@ -10296,49 +10598,56 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             this.Adapter.DeleteCommand.Parameters[7].Value = ((int)(Original_ph_phoneType));
-            this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_ph_areaCode));
-            this.Adapter.DeleteCommand.Parameters[9].Value = ((int)(Original_ph_phone));
+            if ((Original_ph_areaCode == null)) {
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((string)(Original_ph_areaCode));
+            }
+            this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_ph_phone));
             if ((Original_ph_deleted.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((int)(Original_ph_deleted.Value));
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_ph_deleted.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[11].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            this.Adapter.DeleteCommand.Parameters[12].Value = ((System.DateTime)(Original_ph_date_inserted));
-            this.Adapter.DeleteCommand.Parameters[13].Value = ((int)(Original_ph_us_inserted));
+            this.Adapter.DeleteCommand.Parameters[13].Value = ((System.DateTime)(Original_ph_date_inserted));
+            this.Adapter.DeleteCommand.Parameters[14].Value = ((int)(Original_ph_us_inserted));
             if ((Original_ph_date_modified.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((System.DateTime)(Original_ph_date_modified.Value));
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((System.DateTime)(Original_ph_date_modified.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[15].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             if ((Original_ph_us_modified.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[17].Value = ((int)(Original_ph_us_modified.Value));
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((int)(Original_ph_us_modified.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[17].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             if ((Original_ph_date_deleted.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((System.DateTime)(Original_ph_date_deleted.Value));
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((System.DateTime)(Original_ph_date_deleted.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[19].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             if ((Original_ph_us_deleted.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[21].Value = ((int)(Original_ph_us_deleted.Value));
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((int)(Original_ph_us_deleted.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[21].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -10360,7 +10669,7 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<int> ph_adr_id, global::System.Nullable<int> ph_pe_id, global::System.Nullable<int> ph_us_id, int ph_phoneType, int ph_areaCode, int ph_phone, global::System.Nullable<int> ph_deleted, System.DateTime ph_date_inserted, int ph_us_inserted, global::System.Nullable<global::System.DateTime> ph_date_modified, global::System.Nullable<int> ph_us_modified, global::System.Nullable<global::System.DateTime> ph_date_deleted, global::System.Nullable<int> ph_us_deleted) {
+        public virtual int Insert(global::System.Nullable<int> ph_adr_id, global::System.Nullable<int> ph_pe_id, global::System.Nullable<int> ph_us_id, int ph_phoneType, string ph_areaCode, int ph_phone, global::System.Nullable<int> ph_deleted, System.DateTime ph_date_inserted, int ph_us_inserted, global::System.Nullable<global::System.DateTime> ph_date_modified, global::System.Nullable<int> ph_us_modified, global::System.Nullable<global::System.DateTime> ph_date_deleted, global::System.Nullable<int> ph_us_deleted) {
             if ((ph_adr_id.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ph_adr_id.Value));
             }
@@ -10380,7 +10689,12 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             this.Adapter.InsertCommand.Parameters[3].Value = ((int)(ph_phoneType));
-            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(ph_areaCode));
+            if ((ph_areaCode == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(ph_areaCode));
+            }
             this.Adapter.InsertCommand.Parameters[5].Value = ((int)(ph_phone));
             if ((ph_deleted.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[6].Value = ((int)(ph_deleted.Value));
@@ -10439,7 +10753,7 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
                     global::System.Nullable<int> ph_pe_id, 
                     global::System.Nullable<int> ph_us_id, 
                     int ph_phoneType, 
-                    int ph_areaCode, 
+                    string ph_areaCode, 
                     int ph_phone, 
                     global::System.Nullable<int> ph_deleted, 
                     System.DateTime ph_date_inserted, 
@@ -10453,7 +10767,7 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
                     global::System.Nullable<int> Original_ph_pe_id, 
                     global::System.Nullable<int> Original_ph_us_id, 
                     int Original_ph_phoneType, 
-                    int Original_ph_areaCode, 
+                    string Original_ph_areaCode, 
                     int Original_ph_phone, 
                     global::System.Nullable<int> Original_ph_deleted, 
                     System.DateTime Original_ph_date_inserted, 
@@ -10481,7 +10795,12 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(ph_phoneType));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(ph_areaCode));
+            if ((ph_areaCode == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(ph_areaCode));
+            }
             this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(ph_phone));
             if ((ph_deleted.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(ph_deleted.Value));
@@ -10541,49 +10860,56 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_ph_phoneType));
-            this.Adapter.UpdateCommand.Parameters[21].Value = ((int)(Original_ph_areaCode));
-            this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(Original_ph_phone));
+            if ((Original_ph_areaCode == null)) {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_ph_areaCode));
+            }
+            this.Adapter.UpdateCommand.Parameters[23].Value = ((int)(Original_ph_phone));
             if ((Original_ph_deleted.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(Original_ph_deleted.Value));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(Original_ph_deleted.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[25].Value = ((System.DateTime)(Original_ph_date_inserted));
-            this.Adapter.UpdateCommand.Parameters[26].Value = ((int)(Original_ph_us_inserted));
+            this.Adapter.UpdateCommand.Parameters[26].Value = ((System.DateTime)(Original_ph_date_inserted));
+            this.Adapter.UpdateCommand.Parameters[27].Value = ((int)(Original_ph_us_inserted));
             if ((Original_ph_date_modified.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((System.DateTime)(Original_ph_date_modified.Value));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((System.DateTime)(Original_ph_date_modified.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
             if ((Original_ph_us_modified.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(Original_ph_us_modified.Value));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((int)(Original_ph_us_modified.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
             }
             if ((Original_ph_date_deleted.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((System.DateTime)(Original_ph_date_deleted.Value));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((System.DateTime)(Original_ph_date_deleted.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
             }
             if ((Original_ph_us_deleted.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((int)(Original_ph_us_deleted.Value));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((int)(Original_ph_us_deleted.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -10599,6 +10925,40 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    global::System.Nullable<int> ph_adr_id, 
+                    global::System.Nullable<int> ph_pe_id, 
+                    global::System.Nullable<int> ph_us_id, 
+                    string ph_areaCode, 
+                    int ph_phone, 
+                    global::System.Nullable<int> ph_deleted, 
+                    System.DateTime ph_date_inserted, 
+                    int ph_us_inserted, 
+                    global::System.Nullable<global::System.DateTime> ph_date_modified, 
+                    global::System.Nullable<int> ph_us_modified, 
+                    global::System.Nullable<global::System.DateTime> ph_date_deleted, 
+                    global::System.Nullable<int> ph_us_deleted, 
+                    int Original_ph_id, 
+                    global::System.Nullable<int> Original_ph_adr_id, 
+                    global::System.Nullable<int> Original_ph_pe_id, 
+                    global::System.Nullable<int> Original_ph_us_id, 
+                    int Original_ph_phoneType, 
+                    string Original_ph_areaCode, 
+                    int Original_ph_phone, 
+                    global::System.Nullable<int> Original_ph_deleted, 
+                    System.DateTime Original_ph_date_inserted, 
+                    int Original_ph_us_inserted, 
+                    global::System.Nullable<global::System.DateTime> Original_ph_date_modified, 
+                    global::System.Nullable<int> Original_ph_us_modified, 
+                    global::System.Nullable<global::System.DateTime> Original_ph_date_deleted, 
+                    global::System.Nullable<int> Original_ph_us_deleted) {
+            return this.Update(ph_adr_id, ph_pe_id, ph_us_id, Original_ph_phoneType, ph_areaCode, ph_phone, ph_deleted, ph_date_inserted, ph_us_inserted, ph_date_modified, ph_us_modified, ph_date_deleted, ph_us_deleted, Original_ph_id, Original_ph_adr_id, Original_ph_pe_id, Original_ph_us_id, Original_ph_phoneType, Original_ph_areaCode, Original_ph_phone, Original_ph_deleted, Original_ph_date_inserted, Original_ph_us_inserted, Original_ph_date_modified, Original_ph_us_modified, Original_ph_date_deleted, Original_ph_us_deleted);
         }
     }
     
@@ -13426,7 +13786,9 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("us_id", "us_id");
             tableMapping.ColumnMappings.Add("us_name", "us_name");
             tableMapping.ColumnMappings.Add("us_firstname", "us_firstname");
+            tableMapping.ColumnMappings.Add("us_username", "us_username");
             tableMapping.ColumnMappings.Add("us_password", "us_password");
+            tableMapping.ColumnMappings.Add("us_deleted", "us_deleted");
             tableMapping.ColumnMappings.Add("us_date_inserted", "us_date_inserted");
             tableMapping.ColumnMappings.Add("us_us_inserted", "us_us_inserted");
             tableMapping.ColumnMappings.Add("us_date_modified", "us_date_modified");
@@ -13436,7 +13798,7 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `users` WHERE ((`us_id` = @Original_us_id) AND ((@IsNull_us_name = 1 AND `us_name` IS NULL) OR (`us_name` = @Original_us_name)) AND ((@IsNull_us_firstname = 1 AND `us_firstname` IS NULL) OR (`us_firstname` = @Original_us_firstname)) AND (`us_password` = @Original_us_password) AND (`us_date_inserted` = @Original_us_date_inserted) AND (`us_us_inserted` = @Original_us_us_inserted) AND ((@IsNull_us_date_modified = 1 AND `us_date_modified` IS NULL) OR (`us_date_modified` = @Original_us_date_modified)) AND ((@IsNull_us_us_modified = 1 AND `us_us_modified` IS NULL) OR (`us_us_modified` = @Original_us_us_modified)) AND ((@IsNull_us_date_deleted = 1 AND `us_date_deleted` IS NULL) OR (`us_date_deleted` = @Original_us_date_deleted)) AND ((@IsNull_us_us_deleted = 1 AND `us_us_deleted` IS NULL) OR (`us_us_deleted` = @Original_us_us_deleted)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `users` WHERE ((`us_id` = @Original_us_id) AND ((@IsNull_us_name = 1 AND `us_name` IS NULL) OR (`us_name` = @Original_us_name)) AND ((@IsNull_us_firstname = 1 AND `us_firstname` IS NULL) OR (`us_firstname` = @Original_us_firstname)) AND (`us_username` = @Original_us_username) AND (`us_password` = @Original_us_password) AND (`us_deleted` = @Original_us_deleted) AND (`us_date_inserted` = @Original_us_date_inserted) AND (`us_us_inserted` = @Original_us_us_inserted) AND ((@IsNull_us_date_modified = 1 AND `us_date_modified` IS NULL) OR (`us_date_modified` = @Original_us_date_modified)) AND ((@IsNull_us_us_modified = 1 AND `us_us_modified` IS NULL) OR (`us_us_modified` = @Original_us_us_modified)) AND ((@IsNull_us_date_deleted = 1 AND `us_date_deleted` IS NULL) OR (`us_date_deleted` = @Original_us_date_deleted)) AND ((@IsNull_us_us_deleted = 1 AND `us_us_deleted` IS NULL) OR (`us_us_deleted` = @Original_us_us_deleted)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_us_id";
@@ -13481,11 +13843,27 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Original_us_username";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "us_username";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_us_password";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
             param.SourceColumn = "us_password";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Original_us_deleted";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "us_deleted";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -13574,7 +13952,7 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO `users` (`us_name`, `us_firstname`, `us_password`, `us_date_inserted`, `us_us_inserted`, `us_date_modified`, `us_us_modified`, `us_date_deleted`, `us_us_deleted`) VALUES (@us_name, @us_firstname, @us_password, @us_date_inserted, @us_us_inserted, @us_date_modified, @us_us_modified, @us_date_deleted, @us_us_deleted)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO `users` (`us_name`, `us_firstname`, `us_username`, `us_password`, `us_deleted`, `us_date_inserted`, `us_us_inserted`, `us_date_modified`, `us_us_modified`, `us_date_deleted`, `us_us_deleted`) VALUES (@us_name, @us_firstname, @us_username, @us_password, @us_deleted, @us_date_inserted, @us_us_inserted, @us_date_modified, @us_us_modified, @us_date_deleted, @us_us_deleted)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@us_name";
@@ -13591,11 +13969,25 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             param.SourceColumn = "us_firstname";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@us_username";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "us_username";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@us_password";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
             param.SourceColumn = "us_password";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@us_deleted";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "us_deleted";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@us_date_inserted";
@@ -13641,7 +14033,7 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `users` SET `us_name` = @us_name, `us_firstname` = @us_firstname, `us_password` = @us_password, `us_date_inserted` = @us_date_inserted, `us_us_inserted` = @us_us_inserted, `us_date_modified` = @us_date_modified, `us_us_modified` = @us_us_modified, `us_date_deleted` = @us_date_deleted, `us_us_deleted` = @us_us_deleted WHERE ((`us_id` = @Original_us_id) AND ((@IsNull_us_name = 1 AND `us_name` IS NULL) OR (`us_name` = @Original_us_name)) AND ((@IsNull_us_firstname = 1 AND `us_firstname` IS NULL) OR (`us_firstname` = @Original_us_firstname)) AND (`us_password` = @Original_us_password) AND (`us_date_inserted` = @Original_us_date_inserted) AND (`us_us_inserted` = @Original_us_us_inserted) AND ((@IsNull_us_date_modified = 1 AND `us_date_modified` IS NULL) OR (`us_date_modified` = @Original_us_date_modified)) AND ((@IsNull_us_us_modified = 1 AND `us_us_modified` IS NULL) OR (`us_us_modified` = @Original_us_us_modified)) AND ((@IsNull_us_date_deleted = 1 AND `us_date_deleted` IS NULL) OR (`us_date_deleted` = @Original_us_date_deleted)) AND ((@IsNull_us_us_deleted = 1 AND `us_us_deleted` IS NULL) OR (`us_us_deleted` = @Original_us_us_deleted)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `users` SET `us_name` = @us_name, `us_firstname` = @us_firstname, `us_username` = @us_username, `us_password` = @us_password, `us_deleted` = @us_deleted, `us_date_inserted` = @us_date_inserted, `us_us_inserted` = @us_us_inserted, `us_date_modified` = @us_date_modified, `us_us_modified` = @us_us_modified, `us_date_deleted` = @us_date_deleted, `us_us_deleted` = @us_us_deleted WHERE ((`us_id` = @Original_us_id) AND ((@IsNull_us_name = 1 AND `us_name` IS NULL) OR (`us_name` = @Original_us_name)) AND ((@IsNull_us_firstname = 1 AND `us_firstname` IS NULL) OR (`us_firstname` = @Original_us_firstname)) AND (`us_username` = @Original_us_username) AND (`us_password` = @Original_us_password) AND (`us_deleted` = @Original_us_deleted) AND (`us_date_inserted` = @Original_us_date_inserted) AND (`us_us_inserted` = @Original_us_us_inserted) AND ((@IsNull_us_date_modified = 1 AND `us_date_modified` IS NULL) OR (`us_date_modified` = @Original_us_date_modified)) AND ((@IsNull_us_us_modified = 1 AND `us_us_modified` IS NULL) OR (`us_us_modified` = @Original_us_us_modified)) AND ((@IsNull_us_date_deleted = 1 AND `us_date_deleted` IS NULL) OR (`us_date_deleted` = @Original_us_date_deleted)) AND ((@IsNull_us_us_deleted = 1 AND `us_us_deleted` IS NULL) OR (`us_us_deleted` = @Original_us_us_deleted)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@us_name";
@@ -13658,11 +14050,25 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             param.SourceColumn = "us_firstname";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@us_username";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "us_username";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@us_password";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
             param.SourceColumn = "us_password";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@us_deleted";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "us_deleted";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@us_date_inserted";
@@ -13749,11 +14155,27 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Original_us_username";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "us_username";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_us_password";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
             param.SourceColumn = "us_password";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Original_us_deleted";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "us_deleted";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -13855,9 +14277,9 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `us_id`, `us_name`, `us_firstname`, `us_password`, `us_date_inserted`, `us" +
-                "_us_inserted`, `us_date_modified`, `us_us_modified`, `us_date_deleted`, `us_us_d" +
-                "eleted` FROM `users`";
+            this._commandCollection[0].CommandText = "SELECT `us_id`, `us_name`, `us_firstname`, `us_username`, `us_password`, `us_dele" +
+                "ted`, `us_date_inserted`, `us_us_inserted`, `us_date_modified`, `us_us_modified`" +
+                ", `us_date_deleted`, `us_us_deleted` FROM `users`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -13918,7 +14340,7 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_us_id, string Original_us_name, string Original_us_firstname, string Original_us_password, System.DateTime Original_us_date_inserted, int Original_us_us_inserted, global::System.Nullable<global::System.DateTime> Original_us_date_modified, global::System.Nullable<int> Original_us_us_modified, global::System.Nullable<global::System.DateTime> Original_us_date_deleted, global::System.Nullable<int> Original_us_us_deleted) {
+        public virtual int Delete(int Original_us_id, string Original_us_name, string Original_us_firstname, string Original_us_username, string Original_us_password, int Original_us_deleted, System.DateTime Original_us_date_inserted, int Original_us_us_inserted, global::System.Nullable<global::System.DateTime> Original_us_date_modified, global::System.Nullable<int> Original_us_us_modified, global::System.Nullable<global::System.DateTime> Original_us_date_deleted, global::System.Nullable<int> Original_us_us_deleted) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_us_id));
             if ((Original_us_name == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -13936,45 +14358,52 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_us_firstname));
             }
+            if ((Original_us_username == null)) {
+                throw new global::System.ArgumentNullException("Original_us_username");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_us_username));
+            }
             if ((Original_us_password == null)) {
                 throw new global::System.ArgumentNullException("Original_us_password");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_us_password));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_us_password));
             }
-            this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_us_date_inserted));
-            this.Adapter.DeleteCommand.Parameters[7].Value = ((int)(Original_us_us_inserted));
+            this.Adapter.DeleteCommand.Parameters[7].Value = ((int)(Original_us_deleted));
+            this.Adapter.DeleteCommand.Parameters[8].Value = ((System.DateTime)(Original_us_date_inserted));
+            this.Adapter.DeleteCommand.Parameters[9].Value = ((int)(Original_us_us_inserted));
             if ((Original_us_date_modified.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((System.DateTime)(Original_us_date_modified.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            if ((Original_us_us_modified.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((int)(Original_us_us_modified.Value));
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((System.DateTime)(Original_us_date_modified.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((Original_us_date_deleted.HasValue == true)) {
+            if ((Original_us_us_modified.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((System.DateTime)(Original_us_date_deleted.Value));
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((int)(Original_us_us_modified.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
-            if ((Original_us_us_deleted.HasValue == true)) {
+            if ((Original_us_date_deleted.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((int)(Original_us_us_deleted.Value));
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((System.DateTime)(Original_us_date_deleted.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            if ((Original_us_us_deleted.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((int)(Original_us_us_deleted.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -13996,7 +14425,7 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string us_name, string us_firstname, string us_password, System.DateTime us_date_inserted, int us_us_inserted, global::System.Nullable<global::System.DateTime> us_date_modified, global::System.Nullable<int> us_us_modified, global::System.Nullable<global::System.DateTime> us_date_deleted, global::System.Nullable<int> us_us_deleted) {
+        public virtual int Insert(string us_name, string us_firstname, string us_username, string us_password, int us_deleted, System.DateTime us_date_inserted, int us_us_inserted, global::System.Nullable<global::System.DateTime> us_date_modified, global::System.Nullable<int> us_us_modified, global::System.Nullable<global::System.DateTime> us_date_deleted, global::System.Nullable<int> us_us_deleted) {
             if ((us_name == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -14009,37 +14438,44 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(us_firstname));
             }
+            if ((us_username == null)) {
+                throw new global::System.ArgumentNullException("us_username");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(us_username));
+            }
             if ((us_password == null)) {
                 throw new global::System.ArgumentNullException("us_password");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(us_password));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(us_password));
             }
-            this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(us_date_inserted));
-            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(us_us_inserted));
+            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(us_deleted));
+            this.Adapter.InsertCommand.Parameters[5].Value = ((System.DateTime)(us_date_inserted));
+            this.Adapter.InsertCommand.Parameters[6].Value = ((int)(us_us_inserted));
             if ((us_date_modified.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((System.DateTime)(us_date_modified.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((us_us_modified.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((int)(us_us_modified.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            if ((us_date_deleted.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((System.DateTime)(us_date_deleted.Value));
+                this.Adapter.InsertCommand.Parameters[7].Value = ((System.DateTime)(us_date_modified.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((us_us_deleted.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((int)(us_us_deleted.Value));
+            if ((us_us_modified.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((int)(us_us_modified.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((us_date_deleted.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((System.DateTime)(us_date_deleted.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((us_us_deleted.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((int)(us_us_deleted.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -14064,7 +14500,9 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
         public virtual int Update(
                     string us_name, 
                     string us_firstname, 
+                    string us_username, 
                     string us_password, 
+                    int us_deleted, 
                     System.DateTime us_date_inserted, 
                     int us_us_inserted, 
                     global::System.Nullable<global::System.DateTime> us_date_modified, 
@@ -14074,7 +14512,9 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
                     int Original_us_id, 
                     string Original_us_name, 
                     string Original_us_firstname, 
+                    string Original_us_username, 
                     string Original_us_password, 
+                    int Original_us_deleted, 
                     System.DateTime Original_us_date_inserted, 
                     int Original_us_us_inserted, 
                     global::System.Nullable<global::System.DateTime> Original_us_date_modified, 
@@ -14093,94 +14533,108 @@ namespace ManagementTool.mtdbDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(us_firstname));
             }
+            if ((us_username == null)) {
+                throw new global::System.ArgumentNullException("us_username");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(us_username));
+            }
             if ((us_password == null)) {
                 throw new global::System.ArgumentNullException("us_password");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(us_password));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(us_password));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(us_date_inserted));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(us_us_inserted));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(us_deleted));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(us_date_inserted));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(us_us_inserted));
             if ((us_date_modified.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(us_date_modified.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((us_us_modified.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(us_us_modified.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            if ((us_date_deleted.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(us_date_deleted.Value));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(us_date_modified.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((us_us_deleted.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(us_us_deleted.Value));
+            if ((us_us_modified.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(us_us_modified.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_us_id));
-            if ((Original_us_name == null)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            if ((us_date_deleted.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(us_date_deleted.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_us_name));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            if ((Original_us_firstname == null)) {
+            if ((us_us_deleted.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(us_us_deleted.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_us_id));
+            if ((Original_us_name == null)) {
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_us_firstname));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_us_name));
+            }
+            if ((Original_us_firstname == null)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_us_firstname));
+            }
+            if ((Original_us_username == null)) {
+                throw new global::System.ArgumentNullException("Original_us_username");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_us_username));
             }
             if ((Original_us_password == null)) {
                 throw new global::System.ArgumentNullException("Original_us_password");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_us_password));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_us_password));
             }
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((System.DateTime)(Original_us_date_inserted));
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_us_us_inserted));
+            this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_us_deleted));
+            this.Adapter.UpdateCommand.Parameters[19].Value = ((System.DateTime)(Original_us_date_inserted));
+            this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_us_us_inserted));
             if ((Original_us_date_modified.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((System.DateTime)(Original_us_date_modified.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
-            }
-            if ((Original_us_us_modified.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_us_us_modified.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
-            }
-            if ((Original_us_date_deleted.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((System.DateTime)(Original_us_date_deleted.Value));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((System.DateTime)(Original_us_date_modified.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
-            if ((Original_us_us_deleted.HasValue == true)) {
+            if ((Original_us_us_modified.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(Original_us_us_deleted.Value));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(Original_us_us_modified.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            if ((Original_us_date_deleted.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((System.DateTime)(Original_us_date_deleted.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            if ((Original_us_us_deleted.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(Original_us_us_deleted.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
