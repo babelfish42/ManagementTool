@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Editieren");
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Erstellen");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Editieren");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Erstellen");
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.tabControlUsers = new System.Windows.Forms.TabControl();
             this.tabPageUserEdit = new System.Windows.Forms.TabPage();
+            this.checkBoxUserEditSendPasswordEmail = new System.Windows.Forms.CheckBox();
             this.buttonUserEditSave = new System.Windows.Forms.Button();
             this.checkBoxUserEditDelete = new System.Windows.Forms.CheckBox();
             this.textBoxUserEditNewPassword = new System.Windows.Forms.TextBox();
@@ -53,7 +54,9 @@
             this.comboBoxUserEditSex = new System.Windows.Forms.ComboBox();
             this.labelUserEditUser = new System.Windows.Forms.Label();
             this.comboBoxUserEditUsers = new System.Windows.Forms.ComboBox();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPageUserAdd = new System.Windows.Forms.TabPage();
+            this.checkBoxUserAddSendPasswordEmail = new System.Windows.Forms.CheckBox();
             this.buttonUserAddSave = new System.Windows.Forms.Button();
             this.checkBoxUserAddGeneratePassword = new System.Windows.Forms.CheckBox();
             this.textBoxUserAddPassword = new System.Windows.Forms.TextBox();
@@ -71,17 +74,15 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.schliessenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.checkBoxUserAddSendPasswordEmail = new System.Windows.Forms.CheckBox();
-            this.checkBoxUserEditSendPasswordEmail = new System.Windows.Forms.CheckBox();
-            this.mtdbDataSet = new ManagementTool.mtdbDataSet();
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usersTableAdapter = new ManagementTool.mtdbDataSetTableAdapters.usersTableAdapter();
+            this.labelUserEditUsername = new System.Windows.Forms.Label();
+            this.textBoxUserEditUsername = new System.Windows.Forms.TextBox();
+            this.textBoxUserAddUsername = new System.Windows.Forms.TextBox();
+            this.labelUserAddUsername = new System.Windows.Forms.Label();
             this.tabControlUsers.SuspendLayout();
             this.tabPageUserEdit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             this.tabPageUserAdd.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mtdbDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // treeView1
@@ -89,13 +90,13 @@
             this.treeView1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.treeView1.Location = new System.Drawing.Point(14, 41);
             this.treeView1.Name = "treeView1";
-            treeNode13.Name = "NodeUserEdit";
-            treeNode13.Text = "Editieren";
-            treeNode14.Name = "NodeUserAdd";
-            treeNode14.Text = "Erstellen";
+            treeNode3.Name = "NodeUserEdit";
+            treeNode3.Text = "Editieren";
+            treeNode4.Name = "NodeUserAdd";
+            treeNode4.Text = "Erstellen";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode13,
-            treeNode14});
+            treeNode3,
+            treeNode4});
             this.treeView1.Size = new System.Drawing.Size(121, 97);
             this.treeView1.TabIndex = 0;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
@@ -113,6 +114,8 @@
             // tabPageUserEdit
             // 
             this.tabPageUserEdit.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPageUserEdit.Controls.Add(this.textBoxUserEditUsername);
+            this.tabPageUserEdit.Controls.Add(this.labelUserEditUsername);
             this.tabPageUserEdit.Controls.Add(this.checkBoxUserEditSendPasswordEmail);
             this.tabPageUserEdit.Controls.Add(this.buttonUserEditSave);
             this.tabPageUserEdit.Controls.Add(this.checkBoxUserEditDelete);
@@ -139,6 +142,16 @@
             this.tabPageUserEdit.Size = new System.Drawing.Size(499, 310);
             this.tabPageUserEdit.TabIndex = 0;
             this.tabPageUserEdit.Text = "Editieren";
+            // 
+            // checkBoxUserEditSendPasswordEmail
+            // 
+            this.checkBoxUserEditSendPasswordEmail.AutoSize = true;
+            this.checkBoxUserEditSendPasswordEmail.Location = new System.Drawing.Point(286, 212);
+            this.checkBoxUserEditSendPasswordEmail.Name = "checkBoxUserEditSendPasswordEmail";
+            this.checkBoxUserEditSendPasswordEmail.Size = new System.Drawing.Size(152, 17);
+            this.checkBoxUserEditSendPasswordEmail.TabIndex = 19;
+            this.checkBoxUserEditSendPasswordEmail.Text = "sende Password via e-Mail";
+            this.checkBoxUserEditSendPasswordEmail.UseVisualStyleBackColor = true;
             // 
             // buttonUserEditSave
             // 
@@ -222,7 +235,7 @@
             // 
             // textBoxUserEditName
             // 
-            this.textBoxUserEditName.Location = new System.Drawing.Point(328, 82);
+            this.textBoxUserEditName.Location = new System.Drawing.Point(339, 82);
             this.textBoxUserEditName.Name = "textBoxUserEditName";
             this.textBoxUserEditName.Size = new System.Drawing.Size(127, 20);
             this.textBoxUserEditName.TabIndex = 9;
@@ -298,15 +311,23 @@
             // 
             // comboBoxUserEditUsers
             // 
+            this.comboBoxUserEditUsers.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.usersBindingSource, "us_username", true));
+            this.comboBoxUserEditUsers.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "us_username", true));
             this.comboBoxUserEditUsers.FormattingEnabled = true;
             this.comboBoxUserEditUsers.Location = new System.Drawing.Point(128, 15);
             this.comboBoxUserEditUsers.Name = "comboBoxUserEditUsers";
             this.comboBoxUserEditUsers.Size = new System.Drawing.Size(127, 21);
             this.comboBoxUserEditUsers.TabIndex = 0;
             // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "users";
+            // 
             // tabPageUserAdd
             // 
             this.tabPageUserAdd.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPageUserAdd.Controls.Add(this.labelUserAddUsername);
+            this.tabPageUserAdd.Controls.Add(this.textBoxUserAddUsername);
             this.tabPageUserAdd.Controls.Add(this.checkBoxUserAddSendPasswordEmail);
             this.tabPageUserAdd.Controls.Add(this.buttonUserAddSave);
             this.tabPageUserAdd.Controls.Add(this.checkBoxUserAddGeneratePassword);
@@ -329,6 +350,16 @@
             this.tabPageUserAdd.TabIndex = 1;
             this.tabPageUserAdd.Text = "Erstellen";
             // 
+            // checkBoxUserAddSendPasswordEmail
+            // 
+            this.checkBoxUserAddSendPasswordEmail.AutoSize = true;
+            this.checkBoxUserAddSendPasswordEmail.Location = new System.Drawing.Point(242, 148);
+            this.checkBoxUserAddSendPasswordEmail.Name = "checkBoxUserAddSendPasswordEmail";
+            this.checkBoxUserAddSendPasswordEmail.Size = new System.Drawing.Size(152, 17);
+            this.checkBoxUserAddSendPasswordEmail.TabIndex = 15;
+            this.checkBoxUserAddSendPasswordEmail.Text = "sende Password via e-Mail";
+            this.checkBoxUserAddSendPasswordEmail.UseVisualStyleBackColor = true;
+            // 
             // buttonUserAddSave
             // 
             this.buttonUserAddSave.Location = new System.Drawing.Point(386, 281);
@@ -337,6 +368,7 @@
             this.buttonUserAddSave.TabIndex = 14;
             this.buttonUserAddSave.Text = "Speichern";
             this.buttonUserAddSave.UseVisualStyleBackColor = true;
+            this.buttonUserAddSave.Click += new System.EventHandler(this.buttonUserAddSave_Click);
             // 
             // checkBoxUserAddGeneratePassword
             // 
@@ -366,7 +398,7 @@
             // 
             // textBoxUserAddName
             // 
-            this.textBoxUserAddName.Location = new System.Drawing.Point(294, 51);
+            this.textBoxUserAddName.Location = new System.Drawing.Point(307, 51);
             this.textBoxUserAddName.Name = "textBoxUserAddName";
             this.textBoxUserAddName.Size = new System.Drawing.Size(127, 20);
             this.textBoxUserAddName.TabIndex = 10;
@@ -477,39 +509,38 @@
             this.schliessenToolStripMenuItem.Text = "Schliessen";
             this.schliessenToolStripMenuItem.Click += new System.EventHandler(this.schliessenToolStripMenuItem_Click);
             // 
-            // checkBoxUserAddSendPasswordEmail
+            // labelUserEditUsername
             // 
-            this.checkBoxUserAddSendPasswordEmail.AutoSize = true;
-            this.checkBoxUserAddSendPasswordEmail.Location = new System.Drawing.Point(242, 148);
-            this.checkBoxUserAddSendPasswordEmail.Name = "checkBoxUserAddSendPasswordEmail";
-            this.checkBoxUserAddSendPasswordEmail.Size = new System.Drawing.Size(152, 17);
-            this.checkBoxUserAddSendPasswordEmail.TabIndex = 15;
-            this.checkBoxUserAddSendPasswordEmail.Text = "sende Password via e-Mail";
-            this.checkBoxUserAddSendPasswordEmail.UseVisualStyleBackColor = true;
+            this.labelUserEditUsername.AutoSize = true;
+            this.labelUserEditUsername.Location = new System.Drawing.Point(276, 118);
+            this.labelUserEditUsername.Name = "labelUserEditUsername";
+            this.labelUserEditUsername.Size = new System.Drawing.Size(55, 13);
+            this.labelUserEditUsername.TabIndex = 20;
+            this.labelUserEditUsername.Text = "Username";
             // 
-            // checkBoxUserEditSendPasswordEmail
+            // textBoxUserEditUsername
             // 
-            this.checkBoxUserEditSendPasswordEmail.AutoSize = true;
-            this.checkBoxUserEditSendPasswordEmail.Location = new System.Drawing.Point(286, 212);
-            this.checkBoxUserEditSendPasswordEmail.Name = "checkBoxUserEditSendPasswordEmail";
-            this.checkBoxUserEditSendPasswordEmail.Size = new System.Drawing.Size(152, 17);
-            this.checkBoxUserEditSendPasswordEmail.TabIndex = 19;
-            this.checkBoxUserEditSendPasswordEmail.Text = "sende Password via e-Mail";
-            this.checkBoxUserEditSendPasswordEmail.UseVisualStyleBackColor = true;
+            this.textBoxUserEditUsername.Location = new System.Drawing.Point(339, 117);
+            this.textBoxUserEditUsername.Name = "textBoxUserEditUsername";
+            this.textBoxUserEditUsername.Size = new System.Drawing.Size(127, 20);
+            this.textBoxUserEditUsername.TabIndex = 21;
+            this.textBoxUserEditUsername.Click += new System.EventHandler(this.generateUsername_Click);
             // 
-            // mtdbDataSet
+            // textBoxUserAddUsername
             // 
-            this.mtdbDataSet.DataSetName = "mtdbDataSet";
-            this.mtdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.textBoxUserAddUsername.Location = new System.Drawing.Point(307, 78);
+            this.textBoxUserAddUsername.Name = "textBoxUserAddUsername";
+            this.textBoxUserAddUsername.Size = new System.Drawing.Size(127, 20);
+            this.textBoxUserAddUsername.TabIndex = 16;
             // 
-            // usersBindingSource
+            // labelUserAddUsername
             // 
-            this.usersBindingSource.DataMember = "users";
-            this.usersBindingSource.DataSource = this.mtdbDataSet;
-            // 
-            // usersTableAdapter
-            // 
-            this.usersTableAdapter.ClearBeforeFill = true;
+            this.labelUserAddUsername.AutoSize = true;
+            this.labelUserAddUsername.Location = new System.Drawing.Point(239, 84);
+            this.labelUserAddUsername.Name = "labelUserAddUsername";
+            this.labelUserAddUsername.Size = new System.Drawing.Size(55, 13);
+            this.labelUserAddUsername.TabIndex = 17;
+            this.labelUserAddUsername.Text = "Username";
             // 
             // User
             // 
@@ -527,12 +558,11 @@
             this.tabControlUsers.ResumeLayout(false);
             this.tabPageUserEdit.ResumeLayout(false);
             this.tabPageUserEdit.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             this.tabPageUserAdd.ResumeLayout(false);
             this.tabPageUserAdd.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mtdbDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -585,5 +615,9 @@
         private mtdbDataSet mtdbDataSet;
         private System.Windows.Forms.BindingSource usersBindingSource;
         private mtdbDataSetTableAdapters.usersTableAdapter usersTableAdapter;
+        private System.Windows.Forms.TextBox textBoxUserEditUsername;
+        private System.Windows.Forms.Label labelUserEditUsername;
+        private System.Windows.Forms.Label labelUserAddUsername;
+        private System.Windows.Forms.TextBox textBoxUserAddUsername;
     }
 }

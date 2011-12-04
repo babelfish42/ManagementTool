@@ -77,5 +77,44 @@ namespace ManagementTool
             }
         }
 
+        private void checkBoxArticleAutomOrder_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxArticleEditAutomOrder.Checked == true)
+            {
+                labelArticleOrderAmount.Visible = true;
+                textBoxArticleEditAmountToOrder.Visible = true;
+            }
+
+            if (checkBoxArticleEditAutomOrder.Checked == false)
+            {
+                labelArticleOrderAmount.Visible = false;
+                textBoxArticleEditAmountToOrder.Visible = false;
+            }
+
+        }
+
+        private void checkBoxArticleAddAutomOrder_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxArticleAddAutomOrder.Checked == true)
+            {
+                labelArticleAddOrderAmount.Visible = true;
+                textBoxArticleAddAmountToOrder.Visible = true;
+            }
+
+            if (checkBoxArticleAddAutomOrder.Checked == false)
+            {
+                labelArticleAddOrderAmount.Visible = false;
+                textBoxArticleAddAmountToOrder.Visible = false;
+            }
+        }
+
+        private void buttonSupplierAddSave_Click(object sender, EventArgs e)
+        {
+            if (textBoxSupplierAddName.Text == String.Empty)
+            {
+
+            }
+        }
+
     }
 }
